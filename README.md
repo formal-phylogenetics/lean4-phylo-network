@@ -66,7 +66,7 @@ Priority: highest.
 | 8 | Kolbow, Kong, Solís-Lemus (2025–2026), [InPhyNet: Massively Scalable Inference of Phylogenetic Networks](https://doi.org/10.1101/2025.05.05.652278) | method | `lean4-inphynet` | to do | - |
 | 9 | Frohn et al. (2026), [Bounds on Sequence Length for Reconstructing Level-1 Networks Under the CFN Model](https://doi.org/10.1007/s00026-026-00830-0) | method | `lean4-frohn2026` | to do | - |
 | 10 | Dai, Molloy (2026), [NetCS: Is Level-1 Blob Reconstruction Under the Network Multispecies Coalescent Easy?](https://doi.org/10.4230/LIPIcs.WABI.2026.1) | method | `lean4-netcs` | to do | lean4-tob |
-| 11 | Willson, Warnow (2026), [CAMUS: Scalable Phylogenetic Network Estimation](https://doi.org/10.1093/bioinformatics/btag245) | method | [lean4-camus](https://github.com/vltanh/lean4-camus) | formalized (off the train) | - |
+| 11 | Willson, Warnow (2026), [CAMUS: Scalable Phylogenetic Network Estimation](https://doi.org/10.1093/bioinformatics/btag245) | method | [lean4-camus](https://github.com/vltanh/lean4-camus) | formalized | - |
 | 12 | Arasti, Mirarab (2026), [BROOQS: Spectral Methods Resolve Level-1 Hybridization Cycles](https://doi.org/10.64898/2026.08.31.748319) | method | `lean4-brooqs` | to do | - |
 | 13 | Cummings et al. (2026), [Identifiability of Phylogenetic Networks and Quintet Concordance Factors](https://arxiv.org/abs/2608.03544) | theory and algorithm | `lean4-cummings2026` | to do | - |
 | 14 | Kolbow et al. (2026), [SNaQ.jl: Improved Scalability for Level-1 Phylogenetic Network Inference](https://doi.org/10.1093/bioinformatics/btag289) | method | `lean4-snaq-jl` | to do | SNaQ |

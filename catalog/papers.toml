@@ -201,8 +201,7 @@ kind = "method"
 root = "Camus"
 repo = "lean4-camus"
 status = "formalized"
-commit = "f6edae966a69a4153f41ee94f679e16c87d798b4"
-note = "Off the train (Lean v4.35.0-rc4)"
+commit = "f954fc024e444eba97b29766ae95900dfc551dd0"
 
 [[paper]]
 id = "brooqs"
