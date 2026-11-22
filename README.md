@@ -29,12 +29,12 @@ against the paper, and an audit of the paper reports its errors and gaps.
 
 | Family | Papers | Formalized | In progress | Partly covered | To do |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| [1. Quartet- and quintet-based statistical network inference](#1-quartet--and-quintet-based-statistical-network-inference) | 17 | 1 | 1 | 2 | 13 |
+| [1. Quartet- and quintet-based statistical network inference](#1-quartet--and-quintet-based-statistical-network-inference) | 17 | 1 | 15 | 0 | 1 |
 | [2. Semi-directed reconstruction from quartets, quarnets and quinnets](#2-semi-directed-reconstruction-from-quartets-quarnets-and-quinnets) | 11 | 0 | 0 | 1 | 10 |
 | [3. Rooted reconstruction from triplets, trinets, clusters and LCA constraints](#3-rooted-reconstruction-from-triplets-trinets-clusters-and-lca-constraints) | 19 | 0 | 0 | 0 | 19 |
 | [4. Reconstruction and reconciliation from multiple input trees](#4-reconstruction-and-reconciliation-from-multiple-input-trees) | 12 | 0 | 0 | 0 | 12 |
 | [5. Model-based likelihood, Bayesian and sequence-data inference](#5-model-based-likelihood-bayesian-and-sequence-data-inference) | 13 | 0 | 0 | 1 | 12 |
-| **All** | **72** | **1** | **1** | **4** | **66** |
+| **All** | **72** | **1** | **15** | **2** | **54** |
 
 <!-- END catalog:summary -->
 
@@ -56,23 +56,23 @@ Priority: highest.
 
 | # | Paper | Kind | Repository | Status | Uses |
 | ---: | --- | --- | --- | --- | --- |
-| 1 | Baños (2019), [Identifying Species Network Features from Gene Tree Quartets Under the Coalescent Model](https://doi.org/10.1007/s11538-018-0485-4) | theory | `lean4-banos2019` | partly covered: lean4-phylogenetics | - |
+| 1 | Baños (2019), [Identifying Species Network Features from Gene Tree Quartets Under the Coalescent Model](https://doi.org/10.1007/s11538-018-0485-4) | theory | `lean4-banos2019` | in progress: lean4-phylogenetics | - |
 | 2 | Allman, Baños, Rhodes (2019), [NANUQ: A Method for Inferring Species Networks from Gene Trees](https://doi.org/10.1186/s13015-019-0159-2) | method | [lean4-nanuq](https://github.com/vltanh/lean4-nanuq) | in progress | Baños 2019, Allman, Baños, Mitchell, Rhodes 2023, TINNiK, lean4-tob |
-| 3 | Solís-Lemus, Ané (2016), [SNaQ: Inferring Phylogenetic Networks with Maximum Pseudolikelihood](https://doi.org/10.1371/journal.pgen.1005896) | method | `lean4-snaq` | to do | - |
-| 4 | Allman et al. (2024), [Identifiability of Level-1 Species Networks from Gene Tree Quartets](https://doi.org/10.1007/s11538-024-01339-4) | theory | `lean4-allman2024` | to do | Baños 2019 |
-| 5 | Warnow, Tabatabaee, Evans (2025), [Advances in Estimating Level-1 Phylogenetic Networks from Unrooted SNPs](https://doi.org/10.1089/cmb.2024.0710) | method | `lean4-warnow2025` | partly covered: lean4-camus | - |
-| 6 | Allman et al. (2025), [NANUQ+: A Divide-and-Conquer Approach to Network Estimation](https://doi.org/10.1186/s13015-025-00274-w) | method | `lean4-nanuq-plus` | to do | NANUQ, lean4-tob |
-| 7 | Allman et al. (2025), [Beyond Level-1: Identifiability of a Class of Galled Tree-Child Networks](https://doi.org/10.1007/s11538-025-01545-8) | theory | `lean4-allman2025` | to do | Allman et al. 2024 |
-| 8 | Kolbow, Kong, Solís-Lemus (2025–2026), [InPhyNet: Massively Scalable Inference of Phylogenetic Networks](https://doi.org/10.1101/2025.05.05.652278) | method | `lean4-inphynet` | to do | - |
-| 9 | Frohn et al. (2026), [Bounds on Sequence Length for Reconstructing Level-1 Networks Under the CFN Model](https://doi.org/10.1007/s00026-026-00830-0) | method | `lean4-frohn2026` | to do | - |
-| 10 | Dai, Molloy (2026), [NetCS: Is Level-1 Blob Reconstruction Under the Network Multispecies Coalescent Easy?](https://doi.org/10.4230/LIPIcs.WABI.2026.1) | method | `lean4-netcs` | to do | lean4-tob |
+| 3 | Solís-Lemus, Ané (2016), [SNaQ: Inferring Phylogenetic Networks with Maximum Pseudolikelihood](https://doi.org/10.1371/journal.pgen.1005896) | method | `lean4-snaq` | in progress | - |
+| 4 | Allman et al. (2024), [Identifiability of Level-1 Species Networks from Gene Tree Quartets](https://doi.org/10.1007/s11538-024-01339-4) | theory | `lean4-allman2024` | in progress | Baños 2019 |
+| 5 | Warnow, Tabatabaee, Evans (2025), [Advances in Estimating Level-1 Phylogenetic Networks from Unrooted SNPs](https://doi.org/10.1089/cmb.2024.0710) | method | `lean4-warnow2025` | in progress: lean4-camus | - |
+| 6 | Allman et al. (2025), [NANUQ+: A Divide-and-Conquer Approach to Network Estimation](https://doi.org/10.1186/s13015-025-00274-w) | method | `lean4-nanuq-plus` | in progress | NANUQ, lean4-tob |
+| 7 | Allman et al. (2025), [Beyond Level-1: Identifiability of a Class of Galled Tree-Child Networks](https://doi.org/10.1007/s11538-025-01545-8) | theory | `lean4-allman2025` | in progress | Allman et al. 2024 |
+| 8 | Kolbow, Kong, Solís-Lemus (2025–2026), [InPhyNet: Massively Scalable Inference of Phylogenetic Networks](https://doi.org/10.1101/2025.05.05.652278) | method | `lean4-inphynet` | in progress | - |
+| 9 | Frohn et al. (2026), [Bounds on Sequence Length for Reconstructing Level-1 Networks Under the CFN Model](https://doi.org/10.1007/s00026-026-00830-0) | method | `lean4-frohn2026` | in progress | - |
+| 10 | Dai, Molloy (2026), [NetCS: Is Level-1 Blob Reconstruction Under the Network Multispecies Coalescent Easy?](https://doi.org/10.4230/LIPIcs.WABI.2026.1) | method | `lean4-netcs` | in progress | lean4-tob |
 | 11 | Willson, Warnow (2026), [CAMUS: Scalable Phylogenetic Network Estimation](https://doi.org/10.1093/bioinformatics/btag245) | method | [lean4-camus](https://github.com/vltanh/lean4-camus) | formalized | - |
 | 12 | Arasti, Mirarab (2026), [BROOQS: Spectral Methods Resolve Level-1 Hybridization Cycles](https://doi.org/10.64898/2026.08.31.748319) | method | `lean4-brooqs` | to do | - |
-| 13 | Cummings et al. (2026), [Identifiability of Phylogenetic Networks and Quintet Concordance Factors](https://arxiv.org/abs/2608.03544) | theory and algorithm | `lean4-cummings2026` | to do | - |
-| 14 | Kolbow et al. (2026), [SNaQ.jl: Improved Scalability for Level-1 Phylogenetic Network Inference](https://doi.org/10.1093/bioinformatics/btag289) | method | `lean4-snaq-jl` | to do | SNaQ |
-| 15 | Kolbow, Justison, Solís-Lemus (2026), [Beyond Level-1: Fast Inference of Generic Semi-directed Phylogenetic Networks](https://doi.org/10.64898/2026.04.17.719296) | method | `lean4-kolbow2026` | to do | - |
-| 16 | Guang et al. (2026), [DIMPLE: A Tree-Guided Divide-and-Conquer Framework for ILS-Aware Network Inference](https://doi.org/10.64898/2026.10.12.758494) | method | `lean4-dimple` | to do | - |
-| 17 | Wicke et al. (2026), [Consensus Methods for Trees of Blobs and Level-1 Phylogenetic Networks](https://doi.org/10.64898/2026.10.31.763369) | method | `lean4-wicke2026` | to do | lean4-tob |
+| 13 | Cummings et al. (2026), [Identifiability of Phylogenetic Networks and Quintet Concordance Factors](https://arxiv.org/abs/2608.03544) | theory and algorithm | `lean4-cummings2026` | in progress | - |
+| 14 | Kolbow et al. (2026), [SNaQ.jl: Improved Scalability for Level-1 Phylogenetic Network Inference](https://doi.org/10.1093/bioinformatics/btag289) | method | `lean4-snaq-jl` | in progress | SNaQ |
+| 15 | Kolbow, Justison, Solís-Lemus (2026), [Beyond Level-1: Fast Inference of Generic Semi-directed Phylogenetic Networks](https://doi.org/10.64898/2026.04.17.719296) | method | `lean4-kolbow2026` | in progress | - |
+| 16 | Guang et al. (2026), [DIMPLE: A Tree-Guided Divide-and-Conquer Framework for ILS-Aware Network Inference](https://doi.org/10.64898/2026.10.12.758494) | method | `lean4-dimple` | in progress | - |
+| 17 | Wicke et al. (2026), [Consensus Methods for Trees of Blobs and Level-1 Phylogenetic Networks](https://doi.org/10.64898/2026.10.31.763369) | method | `lean4-wicke2026` | in progress | lean4-tob |
 
 ### 2. Semi-directed reconstruction from quartets, quarnets and quinnets
 
