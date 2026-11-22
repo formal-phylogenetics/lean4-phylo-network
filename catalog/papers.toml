@@ -11,14 +11,14 @@
 #   short       the method's name, when it has one
 #   kind        "theory" (an identifiability, characterization or reconstruction
 #               theorem), "theory+algorithm", or "method"
-#   root        the Lean package and the root of its code: the method's name, or, for a paper that
-#               names none, its subject, chosen when its repository starts (lean4-phylogenetics'
+#   root        the Lean package, the root of its code and, by default, the paper's name: the
+#               method's name, otherwise first author and year (lean4-phylogenetics'
 #               docs/CONVENTIONS.md, Section 2)
-#   paper       the paper's name, for its directories, namespace and Palomar submission: first
-#               author and year; omitted when the tools derive it (CONVENTIONS, Section 2)
+#   paper       optional: the paper's name, when it is not the root (CONVENTIONS, Section 2)
 #   status      "todo", "partial" (some results are formalized elsewhere: see covered_by),
 #               "in-progress" (its repository exists), or "formalized"
-#   repo        only when the repository is not named lean4-<id>
+#   repo        only when the repository is not named lean4-<id>, as for papers on one topic that
+#               share a repository (CONVENTIONS, Section 3)
 #   commit      for a formalized paper: the commit that other repositories require
 #   uses        other hubs whose library its formalization requires (lean4-tob: the tree of blobs)
 #   builds_on   ids of papers, of any hub's catalog, whose results its proofs use. Only what is known
@@ -135,7 +135,6 @@ title = "NANUQ+: A Divide-and-Conquer Approach to Network Estimation"
 url = "https://doi.org/10.1186/s13015-025-00274-w"
 kind = "method"
 root = "NanuqPlus"
-paper = "Allman2025NanuqPlus"
 status = "todo"
 uses = ["lean4-tob"]
 builds_on = ["nanuq"]
@@ -189,7 +188,6 @@ title = "NetCS: Is Level-1 Blob Reconstruction Under the Network Multispecies Co
 url = "https://doi.org/10.4230/LIPIcs.WABI.2026.1"
 kind = "method"
 root = "NetCS"
-paper = "Dai2026NetCS"
 status = "todo"
 uses = ["lean4-tob"]
 note = "Takes the tree of blobs as input"
@@ -245,7 +243,6 @@ title = "SNaQ.jl: Improved Scalability for Level-1 Phylogenetic Network Inferenc
 url = "https://doi.org/10.1093/bioinformatics/btag289"
 kind = "method"
 root = "SnaqJl"
-paper = "Kolbow2026SnaqJl"
 status = "todo"
 builds_on = ["snaq"]
 
@@ -860,7 +857,6 @@ title = "PhyloNet-MPL: Maximum Pseudo-Likelihood Inference of Phylogenetic Netwo
 url = "https://doi.org/10.1186/1471-2164-16-S10-S10"
 kind = "method"
 root = "PhylonetMpl"
-paper = "Yu2015PhylonetMpl"
 status = "todo"
 
 [[paper]]
