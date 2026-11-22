@@ -1,0 +1,986 @@
+# The papers of the collection, one [[paper]] per repository to be, grouped by method family.
+#
+# Started on 2026-11-21. Titles, authors and years are as first listed: each formalization records
+# the exact citation in its Phase 0, and corrects the entry here.
+#
+# Fields of a paper:
+#   id          the repository is lean4-<id>: the method's name in lower case when the paper names
+#               one, otherwise first author and year, with a keyword when two papers would share it
+#   family      the [[family]] it belongs to (each paper is in exactly one)
+#   order       its place in the family
+#   short       the method's name, when it has one
+#   kind        "theory" (an identifiability, characterization or reconstruction
+#               theorem), "theory+algorithm", or "method"
+#   root        the Lean package, module root and namespace (lean4-phylogenetics' docs/CONVENTIONS.md)
+#   status      "todo", "partial" (some results are formalized elsewhere: see covered_by),
+#               "in-progress" (its repository exists), or "formalized"
+#   repo        only when the repository is not named lean4-<id>
+#   commit      for a formalized paper: the commit that other repositories require
+#   uses        other hubs whose library its formalization requires (lean4-tob: the tree of blobs)
+#   builds_on   ids of papers, of any hub's catalog, whose results its proofs use. Only what is known
+#               before the paper's inventory; its Phase 1 completes the list here
+#   covered_by  what is already formalized, and where
+#   note        anything else
+
+[[family]]
+id = 1
+title = "Quartet- and quintet-based statistical network inference"
+priority = "highest"
+
+[[family]]
+id = 2
+title = "Semi-directed reconstruction from quartets, quarnets and quinnets"
+
+[[family]]
+id = 3
+title = "Rooted reconstruction from triplets, trinets, clusters and LCA constraints"
+
+[[family]]
+id = 4
+title = "Reconstruction and reconciliation from multiple input trees"
+
+[[family]]
+id = 5
+title = "Model-based likelihood, Bayesian and sequence-data inference"
+
+# ---------------------------------------------------------------------------------------------
+# 1. Quartet- and quintet-based statistical network inference
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "banos2019"
+family = 1
+order = 1
+authors = "Baños"
+year = "2019"
+title = "Identifying Species Network Features from Gene Tree Quartets Under the Coalescent Model"
+url = "https://doi.org/10.1007/s11538-018-0485-4"
+kind = "theory"
+root = "Banos2019"
+status = "partial"
+covered_by = [
+  { repo = "lean4-phylogenetics", what = "the quartet concordance factors of the components of a level-1 cycle are those of the induced metric quarnets (`nmsc_quartetCF`, Phylogenetics/NMSC/Level1/Cycle.lean)" },
+]
+
+[[paper]]
+id = "nanuq"
+family = 1
+order = 2
+short = "NANUQ"
+authors = "Allman, Baños, Rhodes"
+year = "2019"
+title = "NANUQ: A Method for Inferring Species Networks from Gene Trees"
+url = "https://doi.org/10.1186/s13015-019-0159-2"
+kind = "method"
+root = "Nanuq"
+status = "in-progress"
+commit = "c50556050585619023bf85154be48a662db68d51"
+uses = ["lean4-tob"]
+builds_on = ["banos2019", "allman2023", "tinnik"]
+note = "Its repository starts from what lean4-tob formalized of it as a cited source: Steps 2 and 3, Theorem 36 (corrected), Proposition 9"
+
+[[paper]]
+id = "snaq"
+family = 1
+order = 3
+short = "SNaQ"
+authors = "Solís-Lemus, Ané"
+year = "2016"
+title = "SNaQ: Inferring Phylogenetic Networks with Maximum Pseudolikelihood"
+url = "https://doi.org/10.1371/journal.pgen.1005896"
+kind = "method"
+root = "Snaq"
+status = "todo"
+
+[[paper]]
+id = "allman2024"
+family = 1
+order = 4
+authors = "Allman et al."
+year = "2024"
+title = "Identifiability of Level-1 Species Networks from Gene Tree Quartets"
+url = "https://doi.org/10.1007/s11538-024-01339-4"
+kind = "theory"
+root = "Allman2024"
+status = "todo"
+builds_on = ["banos2019"]
+
+[[paper]]
+id = "warnow2025"
+family = 1
+order = 5
+authors = "Warnow, Tabatabaee, Evans"
+year = "2025"
+title = "Advances in Estimating Level-1 Phylogenetic Networks from Unrooted SNPs"
+url = "https://doi.org/10.1089/cmb.2024.0710"
+kind = "method"
+root = "Warnow2025"
+status = "partial"
+covered_by = [
+  { repo = "lean4-camus", what = "Observation 2, and the site model with the convergence of the quartets of SNPs (Camus/External/WarnowTabatabaeeEvans); off the train" },
+]
+
+[[paper]]
+id = "nanuq-plus"
+family = 1
+order = 6
+short = "NANUQ+"
+authors = "Allman et al."
+year = "2025"
+title = "NANUQ+: A Divide-and-Conquer Approach to Network Estimation"
+url = "https://doi.org/10.1186/s13015-025-00274-w"
+kind = "method"
+root = "NanuqPlus"
+status = "todo"
+uses = ["lean4-tob"]
+builds_on = ["nanuq"]
+
+[[paper]]
+id = "allman2025"
+family = 1
+order = 7
+authors = "Allman et al."
+year = "2025"
+title = "Beyond Level-1: Identifiability of a Class of Galled Tree-Child Networks"
+url = "https://doi.org/10.1007/s11538-025-01545-8"
+kind = "theory"
+root = "Allman2025"
+status = "todo"
+builds_on = ["allman2024"]
+
+[[paper]]
+id = "inphynet"
+family = 1
+order = 8
+short = "InPhyNet"
+authors = "Kolbow, Kong, Solís-Lemus"
+year = "2025–2026"
+title = "InPhyNet: Massively Scalable Inference of Phylogenetic Networks"
+url = "https://doi.org/10.1101/2025.05.05.652278"
+kind = "method"
+root = "InPhyNet"
+status = "todo"
+
+[[paper]]
+id = "frohn2026"
+family = 1
+order = 9
+authors = "Frohn et al."
+year = "2026"
+title = "Bounds on Sequence Length for Reconstructing Level-1 Networks Under the CFN Model"
+url = "https://doi.org/10.1007/s00026-026-00830-0"
+kind = "method"
+root = "Frohn2026"
+status = "todo"
+
+[[paper]]
+id = "netcs"
+family = 1
+order = 10
+short = "NetCS"
+authors = "Dai, Molloy"
+year = "2026"
+title = "NetCS: Is Level-1 Blob Reconstruction Under the Network Multispecies Coalescent Easy?"
+url = "https://doi.org/10.4230/LIPIcs.WABI.2026.1"
+kind = "method"
+root = "NetCS"
+status = "todo"
+uses = ["lean4-tob"]
+note = "Takes the tree of blobs as input"
+
+[[paper]]
+id = "camus"
+family = 1
+order = 11
+short = "CAMUS"
+authors = "Willson, Warnow"
+year = "2026"
+title = "CAMUS: Scalable Phylogenetic Network Estimation"
+url = "https://doi.org/10.1093/bioinformatics/btag245"
+kind = "method"
+root = "Camus"
+repo = "lean4-camus"
+status = "formalized"
+commit = "f6edae966a69a4153f41ee94f679e16c87d798b4"
+note = "Off the train (Lean v4.35.0-rc4)"
+
+[[paper]]
+id = "brooqs"
+family = 1
+order = 12
+short = "BROOQS"
+authors = "Arasti, Mirarab"
+year = "2026"
+title = "BROOQS: Spectral Methods Resolve Level-1 Hybridization Cycles"
+url = "https://doi.org/10.64898/2026.08.31.748319"
+kind = "method"
+root = "Brooqs"
+status = "todo"
+
+[[paper]]
+id = "cummings2026"
+family = 1
+order = 13
+authors = "Cummings et al."
+year = "2026"
+title = "Identifiability of Phylogenetic Networks and Quintet Concordance Factors"
+url = "https://arxiv.org/abs/2608.03544"
+kind = "theory+algorithm"
+root = "Cummings2026"
+status = "todo"
+
+[[paper]]
+id = "snaq-jl"
+family = 1
+order = 14
+short = "SNaQ.jl"
+authors = "Kolbow et al."
+year = "2026"
+title = "SNaQ.jl: Improved Scalability for Level-1 Phylogenetic Network Inference"
+url = "https://doi.org/10.1093/bioinformatics/btag289"
+kind = "method"
+root = "SnaqJl"
+status = "todo"
+builds_on = ["snaq"]
+
+[[paper]]
+id = "kolbow2026"
+family = 1
+order = 15
+authors = "Kolbow, Justison, Solís-Lemus"
+year = "2026"
+title = "Beyond Level-1: Fast Inference of Generic Semi-directed Phylogenetic Networks"
+url = "https://doi.org/10.64898/2026.04.17.719296"
+kind = "method"
+root = "Kolbow2026"
+status = "todo"
+
+[[paper]]
+id = "dimple"
+family = 1
+order = 16
+short = "DIMPLE"
+authors = "Guang et al."
+year = "2026"
+title = "DIMPLE: A Tree-Guided Divide-and-Conquer Framework for ILS-Aware Network Inference"
+url = "https://doi.org/10.64898/2026.10.12.758494"
+kind = "method"
+root = "Dimple"
+status = "todo"
+
+[[paper]]
+id = "wicke2026"
+family = 1
+order = 17
+authors = "Wicke et al."
+year = "2026"
+title = "Consensus Methods for Trees of Blobs and Level-1 Phylogenetic Networks"
+url = "https://doi.org/10.64898/2026.10.31.763369"
+kind = "method"
+root = "Wicke2026"
+status = "todo"
+uses = ["lean4-tob"]
+note = "Its full-network results only: results that stop at the tree of blobs are out of scope"
+
+# ---------------------------------------------------------------------------------------------
+# 2. Semi-directed reconstruction from quartets, quarnets and quinnets
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "keijsper2014"
+family = 2
+order = 1
+authors = "Keijsper, Pendavingh"
+year = "2014"
+title = "Reconstructing a Phylogenetic Level-1 Network from Quartets"
+url = "https://doi.org/10.1007/s11538-014-0022-z"
+kind = "method"
+root = "Keijsper2014"
+status = "todo"
+
+[[paper]]
+id = "huber2015"
+family = 2
+order = 2
+authors = "Huber et al."
+year = "2015"
+title = "How Much Information Is Needed to Infer Reticulate Evolutionary Histories?"
+url = "https://doi.org/10.1093/sysbio/syu076"
+kind = "theory"
+root = "Huber2015"
+status = "todo"
+
+[[paper]]
+id = "huber2018"
+family = 2
+order = 3
+authors = "Huber, Moulton, Semple, Wu"
+year = "2018"
+title = "Quarnet Inference Rules for Level-1 Networks"
+url = "https://doi.org/10.1007/s11538-018-0450-2"
+kind = "theory"
+root = "Huber2018"
+status = "todo"
+
+[[paper]]
+id = "huebler2019"
+family = 2
+order = 4
+authors = "Huebler et al."
+year = "2019"
+title = "Constructing Semi-Directed Level-1 Phylogenetic Networks from Quarnets"
+url = "https://arxiv.org/abs/1910.00048"
+kind = "method"
+root = "Huebler2019"
+status = "todo"
+
+[[paper]]
+id = "frohn2025"
+family = 2
+order = 5
+authors = "Frohn et al."
+year = "2025"
+title = "Reconstructing Semi-Directed Level-1 Networks Using Few Quarnets"
+url = "https://doi.org/10.1016/j.jcss.2025.103655"
+kind = "method"
+root = "Frohn2025"
+status = "todo"
+
+[[paper]]
+id = "squirrel"
+family = 2
+order = 6
+short = "Squirrel"
+authors = "Holtgrefe et al."
+year = "2025"
+title = "Squirrel: Reconstructing Semi-directed Level-1 Networks from Four-Leaved Networks or Alignments"
+url = "https://doi.org/10.1093/molbev/msaf067"
+kind = "method"
+root = "Squirrel"
+status = "todo"
+
+[[paper]]
+id = "huber2025"
+family = 2
+order = 7
+authors = "Huber et al."
+year = "2025"
+title = "When Are Quarnets Sufficient to Reconstruct Semi-directed Phylogenetic Networks?"
+url = "https://doi.org/10.1007/s11538-025-01510-5"
+kind = "theory"
+root = "Huber2025"
+status = "partial"
+uses = ["lean4-tob"]
+covered_by = [
+  { repo = "lean4-tob", what = "Theorem 5.1, both directions, on rooted networks of any degrees, where the paper has binary semi-directed networks (TreeOfBlobs/External/HuberEtAl2025)" },
+]
+
+[[paper]]
+id = "holtgrefe2025-level2"
+family = 2
+order = 8
+authors = "Holtgrefe et al."
+year = "2025"
+title = "Distinguishing Level-2 Networks with Quartets and Inter-Taxon Quartet Distances"
+url = "https://doi.org/10.1007/s11538-025-01549-4"
+kind = "theory"
+root = "Holtgrefe2025Level2"
+status = "todo"
+
+[[paper]]
+id = "holtgrefe2025-multirootable"
+family = 2
+order = 9
+authors = "Holtgrefe et al."
+year = "2025–2026"
+title = "Characterizing Semi-directed Phylogenetic Networks and Their Multi-rootable Variants"
+url = "https://arxiv.org/abs/2507.18772"
+kind = "theory"
+root = "Holtgrefe2025Multirootable"
+status = "todo"
+
+[[paper]]
+id = "ribas2026"
+family = 2
+order = 10
+authors = "Ribas, Pons, Ané"
+year = "2026"
+title = "A μ-Distance for Semidirected Orchard Phylogenetic Networks"
+url = "https://arxiv.org/abs/2605.06243"
+kind = "theory"
+root = "Ribas2026"
+status = "todo"
+
+[[paper]]
+id = "holtgrefe2026"
+family = 2
+order = 11
+authors = "Holtgrefe et al."
+year = "2026"
+title = "Encoding Level-3 Semi-directed Phylogenetic Networks by Quarnets and Quinnets"
+url = "https://arxiv.org/abs/2610.07855"
+kind = "theory"
+root = "Holtgrefe2026"
+status = "todo"
+
+# ---------------------------------------------------------------------------------------------
+# 3. Rooted reconstruction from triplets, trinets, clusters and LCA constraints
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "jansson2006-galled"
+family = 3
+order = 1
+authors = "Jansson, Nguyen, Sung"
+year = "2006"
+title = "Algorithms for Combining Rooted Triplets into a Galled Phylogenetic Network"
+url = "https://doi.org/10.1137/S0097539704446529"
+kind = "method"
+root = "Jansson2006Galled"
+status = "todo"
+
+[[paper]]
+id = "jansson2006-level1"
+family = 3
+order = 2
+authors = "Jansson, Sung"
+year = "2006"
+title = "Inferring a Level-1 Phylogenetic Network from Dense Rooted Triplets"
+url = "https://doi.org/10.1016/j.tcs.2006.06.022"
+kind = "method"
+root = "Jansson2006Level1"
+status = "todo"
+
+[[paper]]
+id = "vaniersel2009"
+family = 3
+order = 3
+authors = "van Iersel et al."
+year = "2009"
+title = "Constructing Level-2 Phylogenetic Networks from Triplets"
+url = "https://doi.org/10.1109/TCBB.2009.22"
+kind = "method"
+root = "VanIersel2009"
+status = "todo"
+
+[[paper]]
+id = "cass"
+family = 3
+order = 4
+short = "CASS"
+authors = "van Iersel et al."
+year = "2010"
+title = "CASS: Using Fewer Reticulations to Represent Conflicting Clusters"
+url = "https://doi.org/10.1093/bioinformatics/btq202"
+kind = "method"
+root = "Cass"
+status = "todo"
+
+[[paper]]
+id = "vaniersel2011"
+family = 3
+order = 5
+authors = "van Iersel, Kelk"
+year = "2011"
+title = "Constructing the Simplest Possible Phylogenetic Network from Triplets"
+url = "https://doi.org/10.1007/s00453-009-9333-0"
+kind = "method"
+root = "VanIersel2011"
+status = "todo"
+
+[[paper]]
+id = "lev1athan"
+family = 3
+order = 6
+short = "LEV1ATHAN"
+authors = "Huber et al."
+year = "2011"
+title = "LEV1ATHAN: A Practical Algorithm for Reconstructing Level-1 Phylogenetic Networks"
+url = "https://doi.org/10.1109/TCBB.2010.17"
+kind = "method"
+root = "Lev1athan"
+status = "todo"
+
+[[paper]]
+id = "kelk2012"
+family = 3
+order = 7
+authors = "Kelk, Scornavacca, van Iersel"
+year = "2012"
+title = "On the Elusiveness of Clusters"
+url = "https://doi.org/10.1109/TCBB.2011.128"
+kind = "theory"
+root = "Kelk2012"
+status = "todo"
+
+[[paper]]
+id = "vaniersel2014"
+family = 3
+order = 8
+authors = "van Iersel, Moulton"
+year = "2014"
+title = "Trinets Encode Tree-Child and Level-2 Phylogenetic Networks"
+url = "https://doi.org/10.1007/s00285-013-0683-5"
+kind = "theory"
+root = "VanIersel2014"
+status = "todo"
+
+[[paper]]
+id = "tripnet"
+family = 3
+order = 9
+short = "TripNet"
+authors = "Poormohammadi et al."
+year = "2014"
+title = "TripNet: Constructing Rooted Networks from Rooted Triplets"
+url = "https://doi.org/10.1371/journal.pone.0106531"
+kind = "method"
+root = "TripNet"
+status = "todo"
+
+[[paper]]
+id = "willems2014"
+family = 3
+order = 10
+authors = "Willems, Tahiri, Makarenkov"
+year = "2014"
+title = "Inferring Explicit Hybridization Networks Following the Neighbor-Joining Principle"
+url = "https://doi.org/10.1142/S0219720014500243"
+kind = "method"
+root = "Willems2014"
+status = "todo"
+
+[[paper]]
+id = "trilonet"
+family = 3
+order = 11
+short = "TriLoNet"
+authors = "Oldman et al."
+year = "2016"
+title = "TriLoNet: Piecing Together Small Networks to Reconstruct Reticulate Histories"
+url = "https://doi.org/10.1093/molbev/msw068"
+kind = "method"
+root = "TriLoNet"
+status = "todo"
+
+[[paper]]
+id = "huber2017"
+family = 3
+order = 12
+authors = "Huber et al."
+year = "2017"
+title = "Reconstructing Level-1 Networks from Nondense Binet and Trinet Sets"
+url = "https://doi.org/10.1007/s00453-015-0069-8"
+kind = "method"
+root = "Huber2017"
+status = "todo"
+
+[[paper]]
+id = "willems2018"
+family = 3
+order = 13
+authors = "Willems, Tahiri, Makarenkov"
+year = "2018"
+title = "Building Explicit Hybridization Networks Using Maximum Likelihood and Neighbor Joining"
+url = "https://doi.org/10.5445/KSP/1000085951/04"
+kind = "method"
+root = "Willems2018"
+status = "todo"
+
+[[paper]]
+id = "semple2021"
+family = 3
+order = 14
+authors = "Semple, Toft"
+year = "2021"
+title = "Trinets Encode Orchard Phylogenetic Networks"
+url = "https://doi.org/10.1007/s00285-021-01654-7"
+kind = "theory"
+root = "Semple2021"
+status = "todo"
+
+[[paper]]
+id = "vaniersel2022-trinets"
+family = 3
+order = 15
+authors = "van Iersel et al."
+year = "2022"
+title = "An Algorithm for Reconstructing Level-2 Phylogenetic Networks from Trinets"
+url = "https://doi.org/10.1016/j.ipl.2022.106300"
+kind = "method"
+root = "VanIersel2022Trinets"
+status = "todo"
+builds_on = ["vaniersel2014"]
+
+[[paper]]
+id = "lindeberg2026"
+family = 3
+order = 16
+authors = "Lindeberg et al."
+year = "2026"
+title = "Inferring DAGs and Phylogenetic Networks from Least Common Ancestors"
+url = "https://doi.org/10.1016/j.tcs.2026.116114"
+kind = "method"
+root = "Lindeberg2026"
+status = "todo"
+
+[[paper]]
+id = "ebert2026-constraints"
+family = 3
+order = 17
+authors = "Ebert, Hellmuth"
+year = "2026"
+title = "Inferring Phylogenetic Networks from Allowed and Forbidden LCA-Constraints"
+url = "https://arxiv.org/abs/2605.03827"
+kind = "method"
+root = "Ebert2026Constraints"
+status = "todo"
+
+[[paper]]
+id = "hellmuth2026"
+family = 3
+order = 18
+authors = "Hellmuth, Lindeberg, Moulton"
+year = "2026"
+title = "Encoding Phylogenetic Networks with Least Common Ancestor Constraints"
+url = "https://arxiv.org/abs/2606.16963"
+kind = "theory"
+root = "Hellmuth2026"
+status = "todo"
+
+[[paper]]
+id = "ebert2026-triples"
+family = 3
+order = 19
+authors = "Ebert, Lindeberg, Hellmuth"
+year = "2026"
+title = "Novel Triple-Based Problems for the Construction of Phylogenetic Networks via Least Common Ancestors"
+url = "https://arxiv.org/abs/2606.24415"
+kind = "method"
+root = "Ebert2026Triples"
+status = "todo"
+
+# ---------------------------------------------------------------------------------------------
+# 4. Reconstruction and reconciliation from multiple input trees
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "mirzaei2013"
+family = 4
+order = 1
+authors = "Mirzaei, Wu"
+year = "2013"
+title = "Constructing Parsimonious Hybridization Networks with Multiple Phylogenetic Trees"
+url = "https://pmc.ncbi.nlm.nih.gov/articles/PMC3791036/"
+kind = "method"
+root = "Mirzaei2013"
+status = "todo"
+
+[[paper]]
+id = "albrecht2015"
+family = 4
+order = 2
+authors = "Albrecht"
+year = "2015"
+title = "Computing All Hybridization Networks for Multiple Binary Phylogenetic Input Trees"
+url = "https://doi.org/10.1186/s12859-015-0660-7"
+kind = "method"
+root = "Albrecht2015"
+status = "todo"
+
+[[paper]]
+id = "mirzaei2016"
+family = 4
+order = 3
+authors = "Mirzaei, Wu"
+year = "2016"
+title = "Fast Construction of Near-Parsimonious Hybridization Networks"
+url = "https://doi.org/10.1109/TCBB.2015.2462336"
+kind = "method"
+root = "Mirzaei2016"
+status = "todo"
+builds_on = ["mirzaei2013"]
+
+[[paper]]
+id = "markin2019"
+family = 4
+order = 4
+authors = "Markin, Eulenstein"
+year = "2019"
+title = "Consensus Clusters in Robinson–Foulds Reticulation Networks"
+url = "https://doi.org/10.4230/LIPIcs.WABI.2019.12"
+kind = "method"
+root = "Markin2019"
+status = "todo"
+
+[[paper]]
+id = "vaniersel2019"
+family = 4
+order = 5
+authors = "van Iersel et al."
+year = "2019"
+title = "Reconstructing Tree-Child Networks from Reticulate-Edge-Deleted Subnetworks"
+url = "https://doi.org/10.1007/s11538-019-00641-w"
+kind = "theory"
+root = "VanIersel2019"
+status = "todo"
+
+[[paper]]
+id = "vaniersel2022-fpt"
+family = 4
+order = 6
+authors = "van Iersel et al."
+year = "2022"
+title = "A Practical Fixed-Parameter Algorithm for Constructing Tree-Child Networks from Multiple Binary Trees"
+url = "https://doi.org/10.1007/s00453-021-00914-8"
+kind = "method"
+root = "VanIersel2022Fpt"
+status = "todo"
+
+[[paper]]
+id = "rfnet2"
+family = 4
+order = 7
+short = "RF-Net 2"
+authors = "Markin et al."
+year = "2022"
+title = "RF-Net 2: Fast Inference of Virus Reassortment and Hybridization Networks"
+url = "https://doi.org/10.1093/bioinformatics/btac075"
+kind = "method"
+root = "RfNet2"
+status = "todo"
+
+[[paper]]
+id = "treeknit"
+family = 4
+order = 8
+short = "TreeKnit"
+authors = "Barrat-Charlaix, Vaughan, Neher"
+year = "2022"
+title = "TreeKnit: Inferring Ancestral Reassortment Graphs of Influenza Viruses"
+url = "https://doi.org/10.1371/journal.pcbi.1010394"
+kind = "method"
+root = "TreeKnit"
+status = "todo"
+
+[[paper]]
+id = "alts"
+family = 4
+order = 9
+short = "ALTS"
+authors = "Zhang et al."
+year = "2023"
+title = "ALTS: Inferring Networks by Aligning Lineage Taxon Strings"
+url = "https://doi.org/10.1101/gr.277669.123"
+kind = "method"
+root = "Alts"
+status = "todo"
+
+[[paper]]
+id = "bernardini2023"
+family = 4
+order = 10
+authors = "Bernardini et al."
+year = "2023"
+title = "Constructing Phylogenetic Networks via Cherry Picking and Machine Learning"
+url = "https://doi.org/10.1186/s13015-023-00233-3"
+kind = "method"
+root = "Bernardini2023"
+status = "todo"
+
+[[paper]]
+id = "fhynch"
+family = 4
+order = 11
+short = "FHyNCH"
+authors = "Bernardini et al."
+year = "2024"
+title = "FHyNCH: Inferring Networks from Multifurcating Trees via Cherry Picking and Machine Learning"
+url = "https://doi.org/10.1016/j.ympev.2024.108137"
+kind = "method"
+root = "Fhynch"
+status = "todo"
+builds_on = ["bernardini2023"]
+
+[[paper]]
+id = "phylofusion"
+family = 4
+order = 12
+short = "PhyloFusion"
+authors = "Zhang, Cetinkaya, Huson"
+year = "2025"
+title = "PhyloFusion: Fast Fusion of Rooted Phylogenetic Trees into Rooted Networks"
+url = "https://doi.org/10.1093/sysbio/syaf049"
+kind = "method"
+root = "PhyloFusion"
+status = "todo"
+
+# ---------------------------------------------------------------------------------------------
+# 5. Model-based likelihood, Bayesian and sequence-data inference
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "yu2013"
+family = 5
+order = 1
+authors = "Yu, Zhu, Degnan, Nakhleh"
+year = "2013"
+title = "Parsimonious Inference of Hybridization in the Presence of Incomplete Lineage Sorting"
+url = "https://doi.org/10.1093/sysbio/syt037"
+kind = "method"
+root = "Yu2013"
+status = "todo"
+
+[[paper]]
+id = "yu2014"
+family = 5
+order = 2
+authors = "Yu et al."
+year = "2014"
+title = "Maximum Likelihood Inference of Reticulate Evolutionary Histories"
+url = "https://doi.org/10.1073/pnas.1407950111"
+kind = "method"
+root = "Yu2014"
+status = "todo"
+
+[[paper]]
+id = "phylonet-mpl"
+family = 5
+order = 3
+short = "PhyloNet-MPL"
+authors = "Yu, Nakhleh"
+year = "2015"
+title = "PhyloNet-MPL: Maximum Pseudo-Likelihood Inference of Phylogenetic Networks"
+url = "https://doi.org/10.1186/1471-2164-16-S10-S10"
+kind = "method"
+root = "PhylonetMpl"
+status = "todo"
+
+[[paper]]
+id = "yu2015"
+family = 5
+order = 4
+authors = "Yu, Nakhleh"
+year = "2015"
+title = "A Distance-Based Method for Inferring Phylogenetic Networks in the Presence of ILS"
+url = "https://doi.org/10.1007/978-3-319-19048-8_32"
+kind = "method"
+root = "Yu2015"
+status = "todo"
+
+[[paper]]
+id = "wen2016"
+family = 5
+order = 5
+authors = "Wen, Yu, Nakhleh"
+year = "2016"
+title = "Bayesian Inference of Reticulate Phylogenies Under the Multispecies Network Coalescent"
+url = "https://doi.org/10.1371/journal.pgen.1006006"
+kind = "method"
+root = "Wen2016"
+status = "todo"
+
+[[paper]]
+id = "wen2018"
+family = 5
+order = 6
+authors = "Wen, Nakhleh"
+year = "2018"
+title = "Coestimating Reticulate Phylogenies and Gene Trees from Multilocus Sequence Data"
+url = "https://doi.org/10.1093/sysbio/syx085"
+kind = "method"
+root = "Wen2018"
+status = "todo"
+builds_on = ["wen2016"]
+
+[[paper]]
+id = "zhang2018"
+family = 5
+order = 7
+authors = "Zhang et al."
+year = "2018"
+title = "Bayesian Inference of Species Networks from Multilocus Sequence Data"
+url = "https://doi.org/10.1093/molbev/msx307"
+kind = "method"
+root = "Zhang2018"
+status = "todo"
+
+[[paper]]
+id = "zhu2018"
+family = 5
+order = 8
+authors = "Zhu et al."
+year = "2018"
+title = "Bayesian Inference of Phylogenetic Networks from Bi-allelic Genetic Markers"
+url = "https://doi.org/10.1371/journal.pcbi.1005932"
+kind = "method"
+root = "Zhu2018"
+status = "todo"
+
+[[paper]]
+id = "fastnet"
+family = 5
+order = 9
+short = "FastNet"
+authors = "Hejase et al."
+year = "2018"
+title = "FastNet: Statistical Inference of Phylogenetic Networks Using Genomic Data"
+url = "https://doi.org/10.1007/978-3-030-00834-5_14"
+kind = "method"
+root = "FastNet"
+status = "todo"
+
+[[paper]]
+id = "snappnet"
+family = 5
+order = 10
+short = "SnappNet"
+authors = "Rabier et al."
+year = "2021"
+title = "SnappNet: Inference of Complex Phylogenetic Networks by MCMC"
+url = "https://doi.org/10.1371/journal.pcbi.1008380"
+kind = "method"
+root = "SnappNet"
+status = "todo"
+
+[[paper]]
+id = "allman2022"
+family = 5
+order = 11
+authors = "Allman, Baños, Rhodes"
+year = "2022"
+title = "Identifiability of Species Network Topologies from Genomic Sequences Using the LogDet Distance"
+url = "https://doi.org/10.1007/s00285-022-01734-2"
+kind = "theory"
+root = "Allman2022"
+status = "partial"
+uses = ["lean4-tob"]
+covered_by = [
+  { repo = "lean4-ectoblob", what = "the logDet distance, its additivity on a tree and its failure for a mixture, as ECToBlob uses them (ECToBlob/LogDet.lean)" },
+]
+
+[[paper]]
+id = "netrax"
+family = 5
+order = 12
+short = "NetRAX"
+authors = "Lutteropp et al."
+year = "2022"
+title = "NetRAX: Maximum Likelihood Phylogenetic Network Inference"
+url = "https://doi.org/10.1093/bioinformatics/btac396"
+kind = "method"
+root = "NetRax"
+status = "todo"
+
+[[paper]]
+id = "phynest"
+family = 5
+order = 13
+short = "PhyNEST"
+authors = "Kong, Swofford, Kubatko"
+year = "2025"
+title = "PhyNEST: Inference of Phylogenetic Networks from Sequence Data Using Composite Likelihood"
+url = "https://doi.org/10.1093/sysbio/syae054"
+kind = "method"
+root = "PhyNest"
+status = "todo"

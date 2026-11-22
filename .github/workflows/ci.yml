@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read # Read access to repository contents
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Mathlib's compiled files take most of the runner's disk; remove preinstalled toolchains
+      # that the build does not use.
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
+          df -h /
+      - uses: actions/checkout@v7
+      - uses: leanprover/lean-action@v1
+      # The README's tables are generated from catalog/papers.toml by the root's tools.
+      - name: Check that the README is current
+        run: |
+          git clone --depth 1 https://github.com/vltanh/lean4-phylogenetics ../lean4-phylogenetics
+          python3 ../lean4-phylogenetics/scripts/status.py readme --check --repo lean4-phylo-network
