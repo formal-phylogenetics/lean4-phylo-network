@@ -2,37 +2,27 @@
 
 [![CI](https://github.com/vltanh/lean4-phylo-network/actions/workflows/ci.yml/badge.svg)](https://github.com/vltanh/lean4-phylo-network/actions/workflows/ci.yml)
 
-Lean 4 formalizations of the methods and theory of phylogenetic network estimation, one paper per
-repository. They start with the statistical methods that infer a network from gene trees, through
-quartet and quintet concordance factors under the network multispecies coalescent, and continue with
-reconstruction from small subnetworks (quarnets, trinets), from several trees, and from sequences.
+Lean 4 formalizations of papers on estimating phylogenetic networks, rooted and semi-directed, from
+gene trees, small subnetworks, several trees or sequences.
 
-This repository is their hub, in the collection rooted at
-[lean4-phylogenetics](https://github.com/vltanh/lean4-phylogenetics). It holds:
+This repository is a hub of inference in the collection rooted at
+[lean4-phylogenetics](https://github.com/vltanh/lean4-phylogenetics). It holds the library
+[`PhyloNetwork`](PhyloNetwork), for what two or more of its papers share, those of its sub-hub
+included, and the catalog of the papers, [`catalog/papers.toml`](catalog/papers.toml), from which
+the tables below are generated. The library has hypothesis tests on quartet concordance factors
+(Mitchell, Allman, Rhodes 2019), the blobs, wedge paths and blocks of level-1 networks, cut splits
+of induced networks, the chain of the network multispecies coalescent on a concrete network, and the
+results of Rhodes 2020 and Huber et al. 2025 that several papers cite; its
+[README](PhyloNetwork/README.md) lists the modules. Its sub-hub
+[lean4-phylo-tree-of-blobs](https://github.com/vltanh/lean4-phylo-tree-of-blobs) holds the papers on
+the tree of blobs, a step of network estimation.
 
-- the library [`PhyloNetwork`](PhyloNetwork), for what two papers or more of this hub share, those of
-  its sub-hub included, and the root library does not hold: hypothesis tests on quartet concordance
-  factors, with the T1 and T3 tests of Mitchell, Allman, Rhodes 2019 and their limit laws; blobs,
-  wedge paths and blocks of level-1 networks, treelike sets of four taxa, and the strict dominance of
-  an induced cut-edge split that the tree of blobs does not display; cut splits of induced networks;
-  the chain of the network multispecies coalescent on a concrete network; and the sources that
-  several papers cite, Rhodes 2020 (the quartet distance) and Huber et al. 2025 (Theorem 5.1). Its
-  [README](PhyloNetwork/README.md) says what each module holds and which papers use it;
-- the catalog of the papers, [`catalog/papers.toml`](catalog/papers.toml), from which the tables
-  below are generated.
-
-Inferring the tree of blobs of a network, which shows the parts of its history that are tree-like, is
-a step of network estimation with a literature of its own. Its papers are in the sub-hub
-[lean4-phylo-tree-of-blobs](https://github.com/vltanh/lean4-phylo-tree-of-blobs), whose library `TreeOfBlobs` holds what only they
-share, and whose repositories require this library too. What those papers share with the papers here
-is in `PhyloNetwork`.
-
-The [conventions](https://github.com/vltanh/lean4-phylogenetics/blob/main/docs/CONVENTIONS.md) that
-every repository follows, the [workflow](https://github.com/vltanh/lean4-phylogenetics/blob/main/docs/WORKFLOW.md),
-the registry of the repositories, the shared foundations and the tools are in the root. Each paper is
-formalized with the [formalize-math-paper](https://github.com/vltanh/formalize-math-paper) skill:
-every result the paper proves is proved by the paper's own argument, the statements are checked
-against the paper, and an audit of the paper reports its errors and gaps.
+The collection's
+[conventions](https://github.com/vltanh/lean4-phylogenetics/blob/main/docs/CONVENTIONS.md) and
+[workflow](https://github.com/vltanh/lean4-phylogenetics/blob/main/docs/WORKFLOW.md) are in the
+root. Each paper is formalized with the
+[formalize-math-paper](https://github.com/vltanh/formalize-math-paper) skill: its results are proved
+by the paper's own arguments, and an audit reports its errors and gaps.
 
 ## Status
 
@@ -52,14 +42,12 @@ against the paper, and an audit of the paper reports its errors and gaps.
 
 ## The papers
 
-Each paper is in one family, the one its method belongs to, even when it touches others. Theory
-papers (identifiability, characterization, encoding) are listed with the methods they support. The
-scope is full networks and their supporting theory, not methods that stop at a species tree or a tree
-of blobs: those that stop at a species tree are in the hub
-[lean4-phylo-species-tree](https://github.com/vltanh/lean4-phylo-species-tree), and those that stop
-at the tree of blobs in the sub-hub [lean4-phylo-tree-of-blobs](https://github.com/vltanh/lean4-phylo-tree-of-blobs). *Uses* lists the
-papers, of any hub, that the paper's proofs are known to use, and the other hubs whose library it
-requires. Each paper's inventory completes the list.
+Each paper is in the family of its method, with the theory of that method. Methods that stop at a
+species tree are in [lean4-phylo-species-tree](https://github.com/vltanh/lean4-phylo-species-tree),
+and those that stop at the tree of blobs in
+[lean4-phylo-tree-of-blobs](https://github.com/vltanh/lean4-phylo-tree-of-blobs). *Uses* lists the
+papers, of any hub, whose results a paper's proofs are known to use, and the other hubs whose
+library it requires.
 
 <!-- BEGIN catalog:papers -->
 <!-- Generated by lean4-phylogenetics/scripts/status.py readme --write. Do not edit. -->
@@ -167,12 +155,13 @@ Priority: highest.
 
 ## Starting a paper
 
-From [lean4-phylogenetics](https://github.com/vltanh/lean4-phylogenetics), beside this repository:
+From [lean4-phylogenetics](https://github.com/vltanh/lean4-phylogenetics), when the paper's
+formalization starts:
 
 ```sh
-python3 scripts/status.py next              # the open papers, by priority, with what each waits on
-python3 scripts/new_paper.py snaq           # creates ../lean4-snaq on the train, under this hub
-cd ../lean4-snaq && claude                  # then: /formalize-math-paper https://doi.org/10.1371/journal.pgen.1005896
+python3 scripts/status.py next             # the open papers, by priority
+python3 scripts/new_paper.py <id>          # creates ../papers/network/lean4-<id>
+cd ../papers/network/lean4-<id> && claude  # then: /formalize-math-paper <the paper's link>
 ```
 
 ## Building
@@ -184,20 +173,21 @@ lake build Phylogenetics
 lake env lean scripts/Audit.lean
 ```
 
-Lean and Mathlib `v4.37.0-rc1`; [`lakefile.toml`](lakefile.toml) requires lean4-phylogenetics by
-commit, `3fcabfd`. The audit, [`scripts/Audit.lean`](scripts/Audit.lean), checks that every
-declaration of this library and of lean4-phylogenetics depends only on Lean's standard axioms
-`propext`, `Classical.choice` and `Quot.sound`, and lists the axioms of the main theorems;
-`python3 scripts/gen_audit.py` generates its `import all` lines. CI runs the build and the audit.
+Lean and Mathlib `v4.37.0-rc1`. [`lakefile.toml`](lakefile.toml) requires lean4-phylogenetics at the
+commits of the train. The audit, [`scripts/Audit.lean`](scripts/Audit.lean), checks that every
+declaration of this library and of the libraries it requires uses only Lean's standard axioms;
+`python3 scripts/gen_audit.py` writes its `import all` lines. CI builds the library, runs the audit,
+and checks that the tables above are current.
 
 ## Credits
 
-- **Maintainer:** The-Anh Vu-Le.
-- **Formalization:** Claude Opus 5.5 (`claude-opus-5-5`, Anthropic), in Claude Code, with the
-  [formalize-math-paper](https://github.com/vltanh/formalize-math-paper) skill. The modules of the
-  library were first written for the papers on the tree of blobs, in lean4-phylo-tree-of-blobs, whose history records
-  how they were made.
-- **Review:** no person has reviewed the proofs; Lean's kernel checks them.
+- Maintainer: The-Anh Vu-Le.
+- Catalog and repository: Claude Opus 5.5 (`claude-opus-5-5`, Anthropic) in Claude Code, from the
+  maintainer's list of papers.
+- Formalization: the library by Claude Opus 5.5 in Claude Code, with the formalize-math-paper skill;
+  its modules were first written for the papers on the tree of blobs, in lean4-phylo-tree-of-blobs,
+  whose history records how. Each paper's repository credits its own.
+- Review: no person has reviewed the proofs; Lean's kernel checks them.
 
 ## License
 
