@@ -74,7 +74,7 @@ Priority: highest.
 | 3 | Solís-Lemus, Ané (2016), [SNaQ: Inferring Phylogenetic Networks with Maximum Pseudolikelihood](https://doi.org/10.1371/journal.pgen.1005896) | method | `lean4-snaq` | in progress | - |
 | 4 | Allman et al. (2024), [Identifiability of Level-1 Species Networks from Gene Tree Quartets](https://doi.org/10.1007/s11538-024-01339-4) | theory | `lean4-allman2024` | in progress | Baños 2019 |
 | 5 | Warnow, Tabatabaee, Evans (2025), [Advances in Estimating Level-1 Phylogenetic Networks from Unrooted SNPs](https://doi.org/10.1089/cmb.2024.0710) | method | `lean4-warnow2025` | in progress: lean4-camus | - |
-| 6 | Allman et al. (2025), [NANUQ+: A Divide-and-Conquer Approach to Network Estimation](https://doi.org/10.1186/s13015-025-00274-w) | method | `lean4-nanuq-plus` | in progress | NANUQ, lean4-tob |
+| 6 | Allman et al. (2025), [NANUQ+: A Divide-and-Conquer Approach to Network Estimation](https://doi.org/10.1186/s13015-025-00274-w) | method | `lean4-nanuq-plus` | in progress | NANUQ |
 | 7 | Allman et al. (2025), [Beyond Level-1: Identifiability of a Class of Galled Tree-Child Networks](https://doi.org/10.1007/s11538-025-01545-8) | theory | `lean4-allman2025` | in progress | Allman et al. 2024 |
 | 8 | Kolbow, Kong, Solís-Lemus (2025–2026), [InPhyNet: Massively Scalable Inference of Phylogenetic Networks](https://doi.org/10.1101/2025.05.05.652278) | method | `lean4-inphynet` | in progress | - |
 | 9 | Frohn et al. (2026), [Bounds on Sequence Length for Reconstructing Level-1 Networks Under the CFN Model](https://doi.org/10.1007/s00026-026-00830-0) | method | `lean4-frohn2026` | in progress | - |
