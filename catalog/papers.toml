@@ -214,7 +214,7 @@ kind = "method"
 root = "Camus"
 repo = "lean4-camus"
 status = "formalized"
-commit = "6cfd30785ca9ea415e91d45e59ade708b94921c5"
+commit = "2cc92c267854263ffa3a071dbc91a109ed0d40b3"
 
 [[paper]]
 id = "brooqs"
