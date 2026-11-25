@@ -119,7 +119,7 @@ title = "Identifiability of Level-1 Species Networks from Gene Tree Quartets"
 url = "https://doi.org/10.1007/s11538-024-01339-4"
 kind = "theory"
 root = "Allman2024"
-status = "in-progress"
+status = "todo"
 builds_on = ["banos2019"]
 
 [[paper]]
@@ -132,7 +132,7 @@ title = "Advances in Estimating Level-1 Phylogenetic Networks from Unrooted SNPs
 url = "https://doi.org/10.1089/cmb.2024.0710"
 kind = "method"
 root = "Warnow2025"
-status = "in-progress"
+status = "partial"
 covered_by = [
   { repo = "lean4-camus", what = "Observation 2, and the site model with the convergence of the quartets of SNPs (Camus/External/WarnowTabatabaeeEvans)" },
 ]
@@ -148,7 +148,7 @@ title = "NANUQ+: A Divide-and-Conquer Approach to Network Estimation"
 url = "https://doi.org/10.1186/s13015-025-00274-w"
 kind = "method"
 root = "NanuqPlus"
-status = "in-progress"
+status = "todo"
 builds_on = ["nanuq"]
 
 [[paper]]
@@ -161,7 +161,7 @@ title = "Beyond Level-1: Identifiability of a Class of Galled Tree-Child Network
 url = "https://doi.org/10.1007/s11538-025-01545-8"
 kind = "theory"
 root = "Allman2025"
-status = "in-progress"
+status = "todo"
 builds_on = ["allman2024"]
 
 [[paper]]
@@ -175,7 +175,7 @@ title = "InPhyNet: Massively Scalable Inference of Phylogenetic Networks"
 url = "https://doi.org/10.1101/2025.05.05.652278"
 kind = "method"
 root = "InPhyNet"
-status = "in-progress"
+status = "todo"
 
 [[paper]]
 id = "frohn2026"
@@ -187,7 +187,7 @@ title = "Bounds on Sequence Length for Reconstructing Level-1 Networks Under the
 url = "https://doi.org/10.1007/s00026-026-00830-0"
 kind = "method"
 root = "Frohn2026"
-status = "in-progress"
+status = "todo"
 
 [[paper]]
 id = "netcs"
@@ -200,7 +200,7 @@ title = "NetCS: Is Level-1 Blob Reconstruction Under the Network Multispecies Co
 url = "https://doi.org/10.4230/LIPIcs.WABI.2026.1"
 kind = "method"
 root = "NetCS"
-status = "in-progress"
+status = "todo"
 uses = ["lean4-tob"]
 note = "Takes the tree of blobs as input"
 
@@ -243,7 +243,7 @@ title = "Identifiability of Phylogenetic Networks and Quintet Concordance Factor
 url = "https://arxiv.org/abs/2608.03544"
 kind = "theory+algorithm"
 root = "Cummings2026"
-status = "in-progress"
+status = "todo"
 
 [[paper]]
 id = "snaq-jl"
@@ -256,7 +256,7 @@ title = "SNaQ.jl: Improved Scalability for Level-1 Phylogenetic Network Inferenc
 url = "https://doi.org/10.1093/bioinformatics/btag289"
 kind = "method"
 root = "SnaqJl"
-status = "in-progress"
+status = "todo"
 builds_on = ["snaq"]
 
 [[paper]]
@@ -269,7 +269,7 @@ title = "Beyond Level-1: Fast Inference of Generic Semi-directed Phylogenetic Ne
 url = "https://doi.org/10.64898/2026.04.17.719296"
 kind = "method"
 root = "Kolbow2026"
-status = "in-progress"
+status = "todo"
 
 [[paper]]
 id = "dimple"
@@ -282,7 +282,7 @@ title = "DIMPLE: A Tree-Guided Divide-and-Conquer Framework for ILS-Aware Networ
 url = "https://doi.org/10.64898/2026.10.12.758494"
 kind = "method"
 root = "Dimple"
-status = "in-progress"
+status = "todo"
 
 [[paper]]
 id = "wicke2026"
@@ -294,7 +294,7 @@ title = "Consensus Methods for Trees of Blobs and Level-1 Phylogenetic Networks"
 url = "https://doi.org/10.64898/2026.10.31.763369"
 kind = "method"
 root = "Wicke2026"
-status = "in-progress"
+status = "todo"
 uses = ["lean4-tob"]
 note = "Its full-network results only: results that stop at the tree of blobs are out of scope"
 
