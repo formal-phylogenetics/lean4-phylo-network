@@ -75,6 +75,7 @@ root = "Banos2019"
 repo = "lean4-banos2019"
 status = "formalized"
 commit = "40c3d25397b792f1f7c285cbf393e166872e6302"
+builds_on = ["allman2011"]
 covered_by = [
   { repo = "lean4-phylogenetics", what = "the quartet concordance factors of the components of a level-1 cycle are those of the induced metric quarnets (`nmsc_quartetCF`, Phylogenetics/NMSC/Level1/Cycle.lean)" },
 ]
@@ -217,6 +218,7 @@ root = "Camus"
 repo = "lean4-camus"
 status = "formalized"
 commit = "2cc92c267854263ffa3a071dbc91a109ed0d40b3"
+builds_on = ["allman2011"]
 
 [[paper]]
 id = "brooqs"
