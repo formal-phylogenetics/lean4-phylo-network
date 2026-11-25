@@ -72,7 +72,9 @@ title = "Identifying Species Network Features from Gene Tree Quartets Under the 
 url = "https://doi.org/10.1007/s11538-018-0485-4"
 kind = "theory"
 root = "Banos2019"
-status = "in-progress"
+repo = "lean4-banos2019"
+status = "formalized"
+commit = "40c3d25397b792f1f7c285cbf393e166872e6302"
 covered_by = [
   { repo = "lean4-phylogenetics", what = "the quartet concordance factors of the components of a level-1 cycle are those of the induced metric quarnets (`nmsc_quartetCF`, Phylogenetics/NMSC/Level1/Cycle.lean)" },
 ]

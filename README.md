@@ -41,12 +41,12 @@ against the paper, and an audit of the paper reports its errors and gaps.
 
 | Family | Papers | Formalized | In progress | Partly covered | To do |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| [1. Quartet- and quintet-based statistical network inference](#1-quartet--and-quintet-based-statistical-network-inference) | 17 | 1 | 15 | 0 | 1 |
+| [1. Quartet- and quintet-based statistical network inference](#1-quartet--and-quintet-based-statistical-network-inference) | 17 | 2 | 14 | 0 | 1 |
 | [2. Semi-directed reconstruction from quartets, quarnets and quinnets](#2-semi-directed-reconstruction-from-quartets-quarnets-and-quinnets) | 11 | 0 | 0 | 1 | 10 |
 | [3. Rooted reconstruction from triplets, trinets, clusters and LCA constraints](#3-rooted-reconstruction-from-triplets-trinets-clusters-and-lca-constraints) | 19 | 0 | 0 | 0 | 19 |
 | [4. Reconstruction and reconciliation from multiple input trees](#4-reconstruction-and-reconciliation-from-multiple-input-trees) | 12 | 0 | 0 | 0 | 12 |
 | [5. Model-based likelihood, Bayesian and sequence-data inference](#5-model-based-likelihood-bayesian-and-sequence-data-inference) | 13 | 0 | 0 | 1 | 12 |
-| **All** | **72** | **1** | **15** | **2** | **54** |
+| **All** | **72** | **2** | **14** | **2** | **54** |
 
 <!-- END catalog:summary -->
 
@@ -69,7 +69,7 @@ Priority: highest.
 
 | # | Paper | Kind | Repository | Status | Uses |
 | ---: | --- | --- | --- | --- | --- |
-| 1 | Baños (2019), [Identifying Species Network Features from Gene Tree Quartets Under the Coalescent Model](https://doi.org/10.1007/s11538-018-0485-4) | theory | `lean4-banos2019` | in progress: lean4-phylogenetics | - |
+| 1 | Baños (2019), [Identifying Species Network Features from Gene Tree Quartets Under the Coalescent Model](https://doi.org/10.1007/s11538-018-0485-4) | theory | [lean4-banos2019](https://github.com/vltanh/lean4-banos2019) | formalized | - |
 | 2 | Allman, Baños, Rhodes (2019), [NANUQ: A Method for Inferring Species Networks from Gene Trees](https://doi.org/10.1186/s13015-019-0159-2) | method | [lean4-nanuq](https://github.com/vltanh/lean4-nanuq) | in progress | Baños 2019, Allman, Baños, Mitchell, Rhodes 2023, TINNiK |
 | 3 | Solís-Lemus, Ané (2016), [SNaQ: Inferring Phylogenetic Networks with Maximum Pseudolikelihood](https://doi.org/10.1371/journal.pgen.1005896) | method | `lean4-snaq` | in progress | - |
 | 4 | Allman et al. (2024), [Identifiability of Level-1 Species Networks from Gene Tree Quartets](https://doi.org/10.1007/s11538-024-01339-4) | theory | `lean4-allman2024` | in progress | Baños 2019 |
