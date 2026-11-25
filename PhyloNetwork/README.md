@@ -2,12 +2,12 @@
 
 The library of this hub: the definitions and results that two or more papers on network estimation
 use, those of its sub-hub
-[lean4-phylo-tree-of-blobs](https://github.com/vltanh/lean4-phylo-tree-of-blobs) (the tree of blobs)
-included, and that the root library
-[lean4-phylogenetics](https://github.com/vltanh/lean4-phylogenetics) does not hold. Each goes to the
-lowest node of the tree above every repository that uses it: a result that one paper uses stays in
-that paper's repository; one that only the papers on the tree of blobs use goes to
-lean4-phylo-tree-of-blobs's library `TreeOfBlobs`; one that papers of several hubs use, or that
+[lean4-phylo-tree-of-blobs](https://github.com/formal-phylogenetics/lean4-phylo-tree-of-blobs) (the
+tree of blobs) included, and that the root library
+[lean4-phylogenetics](https://github.com/formal-phylogenetics/lean4-phylogenetics) does not hold.
+Each goes to the lowest node of the tree above every repository that uses it: a result that one
+paper uses stays in that paper's repository; one that only the papers on the tree of blobs use goes
+to lean4-phylo-tree-of-blobs's library `TreeOfBlobs`; one that papers of several hubs use, or that
 textbooks state, goes to the root library.
 
 | Module | Content | Used by |

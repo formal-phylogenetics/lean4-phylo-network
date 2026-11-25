@@ -35,7 +35,7 @@
 repo = "lean4-phylo-tree-of-blobs"
 title = "The tree of blobs"
 scope = "Inferring the tree of blobs of a network from quartet concordance factors: identifiability and consistent inference"
-catalog = "https://github.com/vltanh/lean4-phylo-tree-of-blobs/blob/main/catalog/papers.toml"
+catalog = "https://github.com/formal-phylogenetics/lean4-phylo-tree-of-blobs/blob/main/catalog/papers.toml"
 
 [[family]]
 id = 1
