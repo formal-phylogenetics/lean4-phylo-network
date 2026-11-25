@@ -89,10 +89,9 @@ url = "https://doi.org/10.1186/s13015-019-0159-2"
 kind = "method"
 root = "Nanuq"
 status = "in-progress"
-commit = "b62cbb85511adafe32e43efddecc9a1b1d91398e"
-uses = ["lean4-tob"]
+commit = "edca11442dc8f45662b35a6a4d03073010bfea10"
 builds_on = ["banos2019", "allman2023", "tinnik"]
-note = "Its repository starts from what lean4-tob formalized of it as a cited source: Steps 2 and 3, Theorem 36 (corrected), Proposition 9"
+note = "Formalized: Steps 2 and 3, Theorem 36 (corrected) down to the distance of Step 3, Proposition 9; Steps 4 and 5 and the results on split systems remain"
 
 [[paper]]
 id = "snaq"

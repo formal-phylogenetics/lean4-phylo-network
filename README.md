@@ -70,7 +70,7 @@ Priority: highest.
 | # | Paper | Kind | Repository | Status | Uses |
 | ---: | --- | --- | --- | --- | --- |
 | 1 | Baños (2019), [Identifying Species Network Features from Gene Tree Quartets Under the Coalescent Model](https://doi.org/10.1007/s11538-018-0485-4) | theory | `lean4-banos2019` | in progress: lean4-phylogenetics | - |
-| 2 | Allman, Baños, Rhodes (2019), [NANUQ: A Method for Inferring Species Networks from Gene Trees](https://doi.org/10.1186/s13015-019-0159-2) | method | [lean4-nanuq](https://github.com/vltanh/lean4-nanuq) | in progress | Baños 2019, Allman, Baños, Mitchell, Rhodes 2023, TINNiK, lean4-tob |
+| 2 | Allman, Baños, Rhodes (2019), [NANUQ: A Method for Inferring Species Networks from Gene Trees](https://doi.org/10.1186/s13015-019-0159-2) | method | [lean4-nanuq](https://github.com/vltanh/lean4-nanuq) | in progress | Baños 2019, Allman, Baños, Mitchell, Rhodes 2023, TINNiK |
 | 3 | Solís-Lemus, Ané (2016), [SNaQ: Inferring Phylogenetic Networks with Maximum Pseudolikelihood](https://doi.org/10.1371/journal.pgen.1005896) | method | `lean4-snaq` | in progress | - |
 | 4 | Allman et al. (2024), [Identifiability of Level-1 Species Networks from Gene Tree Quartets](https://doi.org/10.1007/s11538-024-01339-4) | theory | `lean4-allman2024` | in progress | Baños 2019 |
 | 5 | Warnow, Tabatabaee, Evans (2025), [Advances in Estimating Level-1 Phylogenetic Networks from Unrooted SNPs](https://doi.org/10.1089/cmb.2024.0710) | method | `lean4-warnow2025` | in progress: lean4-camus | - |
