@@ -1,7 +1,7 @@
 name = "PhyloNetwork"
-version = "0.1.0"
+version = "0.2.0"
 keywords = ["math", "phylogenetics"]
-description = "What the formalizations of the papers on phylogenetic network estimation share"
+description = "What the formalizations of the papers on phylogenetic network estimation share: hypothesis tests on quartet concordance factors, level-1 blobs, induced splits, the chain of the network multispecies coalescent, and the sources several papers cite"
 defaultTargets = ["PhyloNetwork"]
 
 [leanOptions]
@@ -13,7 +13,7 @@ maxSynthPendingDepth = 3
 [[require]]
 name = "Phylogenetics"
 git = "https://github.com/vltanh/lean4-phylogenetics"
-rev = "b56ce531644230622f069aaa8aa51a5143c1411e"
+rev = "1d73084b42339bde9271ff4bac9663a36b36607d"
 
 [[require]]
 name = "mathlib"

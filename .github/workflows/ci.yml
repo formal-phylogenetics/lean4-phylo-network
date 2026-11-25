@@ -20,6 +20,17 @@ jobs:
           df -h /
       - uses: actions/checkout@v7
       - uses: leanprover/lean-action@v1
+        with:
+          build-args: "--wfail"
+      # `lake build` builds only the modules of lean4-phylogenetics that this library imports; the
+      # audit reads all of them.
+      - name: Build the library that the audit reads
+        run: lake build Phylogenetics
+      # The audit sees a module's proofs only through its own `import all` line.
+      - name: Check that the audit imports every module of the libraries
+        run: python3 scripts/gen_audit.py --check
+      - name: Audit the axioms
+        run: lake env lean scripts/Audit.lean
       # The README's tables are generated from catalog/papers.toml by the root's tools.
       - name: Check that the README is current
         run: |

@@ -20,11 +20,22 @@
 #   repo        only when the repository is not named lean4-<id>, as for papers on one topic that
 #               share a repository (CONVENTIONS, Section 3)
 #   commit      for a formalized paper: the commit that other repositories require
-#   uses        other hubs whose library its formalization requires (lean4-tob: the tree of blobs)
+#   uses        other hubs whose library its formalization requires (lean4-tob: the tree of blobs),
+#               besides this one
 #   builds_on   ids of papers, of any hub's catalog, whose results its proofs use. Only what is known
 #               before the paper's inventory; its Phase 1 completes the list here
 #   covered_by  what is already formalized, and where
 #   note        anything else
+
+# The sub-hubs of this hub: hubs for a part of its field, each with its library and its catalog. Their
+# papers are papers on network estimation too, and require this hub's library as well as their own
+# (lean4-phylogenetics' docs/CONVENTIONS.md, Section 1); the registry, lean4-phylogenetics'
+# collection/repos.toml, gives each its `parent`.
+[[subhub]]
+repo = "lean4-tob"
+title = "The tree of blobs"
+scope = "Inferring the tree of blobs of a network from quartet concordance factors: identifiability and consistent inference"
+catalog = "https://github.com/vltanh/lean4-tob/blob/main/catalog/papers.toml"
 
 [[family]]
 id = 1
@@ -373,9 +384,8 @@ url = "https://doi.org/10.1007/s11538-025-01510-5"
 kind = "theory"
 root = "Huber2025"
 status = "partial"
-uses = ["lean4-tob"]
 covered_by = [
-  { repo = "lean4-tob", what = "Theorem 5.1, both directions, on rooted networks of any degrees, where the paper has binary semi-directed networks (TreeOfBlobs/External/HuberEtAl2025)" },
+  { repo = "lean4-phylo-network", what = "Theorem 5.1, both directions, on rooted networks of any degrees, where the paper has binary semi-directed networks (PhyloNetwork/External/HuberEtAl2025)" },
 ]
 
 [[paper]]
