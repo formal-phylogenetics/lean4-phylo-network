@@ -20,8 +20,8 @@
 #   repo        only when the repository is not named lean4-<id>, as for papers on one topic that
 #               share a repository (CONVENTIONS, Section 3)
 #   commit      for a formalized paper: the commit that other repositories require
-#   uses        other hubs whose library its formalization requires (lean4-tob: the tree of blobs),
-#               besides this one
+#   uses        other hubs whose library its formalization requires (lean4-phylo-tree-of-blobs: the
+#               tree of blobs), besides this one
 #   builds_on   ids of papers, of any hub's catalog, whose results its proofs use. Only what is known
 #               before the paper's inventory; its Phase 1 completes the list here
 #   covered_by  what is already formalized, and where
@@ -32,10 +32,10 @@
 # (lean4-phylogenetics' docs/CONVENTIONS.md, Section 1); the registry, lean4-phylogenetics'
 # collection/repos.toml, gives each its `parent`.
 [[subhub]]
-repo = "lean4-tob"
+repo = "lean4-phylo-tree-of-blobs"
 title = "The tree of blobs"
 scope = "Inferring the tree of blobs of a network from quartet concordance factors: identifiability and consistent inference"
-catalog = "https://github.com/vltanh/lean4-tob/blob/main/catalog/papers.toml"
+catalog = "https://github.com/vltanh/lean4-phylo-tree-of-blobs/blob/main/catalog/papers.toml"
 
 [[family]]
 id = 1
@@ -201,7 +201,7 @@ url = "https://doi.org/10.4230/LIPIcs.WABI.2026.1"
 kind = "method"
 root = "NetCS"
 status = "todo"
-uses = ["lean4-tob"]
+uses = ["lean4-phylo-tree-of-blobs"]
 note = "Takes the tree of blobs as input"
 
 [[paper]]
@@ -295,7 +295,7 @@ url = "https://doi.org/10.64898/2026.10.31.763369"
 kind = "method"
 root = "Wicke2026"
 status = "todo"
-uses = ["lean4-tob"]
+uses = ["lean4-phylo-tree-of-blobs"]
 note = "Its full-network results only: results that stop at the tree of blobs are out of scope"
 
 # ---------------------------------------------------------------------------------------------
@@ -969,7 +969,7 @@ url = "https://doi.org/10.1007/s00285-022-01734-2"
 kind = "theory"
 root = "Allman2022"
 status = "partial"
-uses = ["lean4-tob"]
+uses = ["lean4-phylo-tree-of-blobs"]
 covered_by = [
   { repo = "lean4-ectoblob", what = "the logDet distance, its additivity on a tree and its failure for a mixture, as ECToBlob uses them (ECToBlob/LogDet.lean)" },
 ]

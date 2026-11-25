@@ -23,7 +23,7 @@ This repository is their hub, in the collection rooted at
 
 Inferring the tree of blobs of a network, which shows the parts of its history that are tree-like, is
 a step of network estimation with a literature of its own. Its papers are in the sub-hub
-[lean4-tob](https://github.com/vltanh/lean4-tob), whose library `TreeOfBlobs` holds what only they
+[lean4-phylo-tree-of-blobs](https://github.com/vltanh/lean4-phylo-tree-of-blobs), whose library `TreeOfBlobs` holds what only they
 share, and whose repositories require this library too. What those papers share with the papers here
 is in `PhyloNetwork`.
 
@@ -57,7 +57,7 @@ papers (identifiability, characterization, encoding) are listed with the methods
 scope is full networks and their supporting theory, not methods that stop at a species tree or a tree
 of blobs: those that stop at a species tree are in the hub
 [lean4-phylo-species-tree](https://github.com/vltanh/lean4-phylo-species-tree), and those that stop
-at the tree of blobs in the sub-hub [lean4-tob](https://github.com/vltanh/lean4-tob). *Uses* lists the
+at the tree of blobs in the sub-hub [lean4-phylo-tree-of-blobs](https://github.com/vltanh/lean4-phylo-tree-of-blobs). *Uses* lists the
 papers, of any hub, that the paper's proofs are known to use, and the other hubs whose library it
 requires. Each paper's inventory completes the list.
 
@@ -79,14 +79,14 @@ Priority: highest.
 | 7 | Allman et al. (2025), [Beyond Level-1: Identifiability of a Class of Galled Tree-Child Networks](https://doi.org/10.1007/s11538-025-01545-8) | theory | `lean4-allman2025` | to do | Allman et al. 2024 |
 | 8 | Kolbow, Kong, Solís-Lemus (2025–2026), [InPhyNet: Massively Scalable Inference of Phylogenetic Networks](https://doi.org/10.1101/2025.05.05.652278) | method | `lean4-inphynet` | to do | - |
 | 9 | Frohn et al. (2026), [Bounds on Sequence Length for Reconstructing Level-1 Networks Under the CFN Model](https://doi.org/10.1007/s00026-026-00830-0) | method | `lean4-frohn2026` | to do | - |
-| 10 | Dai, Molloy (2026), [NetCS: Is Level-1 Blob Reconstruction Under the Network Multispecies Coalescent Easy?](https://doi.org/10.4230/LIPIcs.WABI.2026.1) | method | `lean4-netcs` | to do | lean4-tob |
+| 10 | Dai, Molloy (2026), [NetCS: Is Level-1 Blob Reconstruction Under the Network Multispecies Coalescent Easy?](https://doi.org/10.4230/LIPIcs.WABI.2026.1) | method | `lean4-netcs` | to do | lean4-phylo-tree-of-blobs |
 | 11 | Willson, Warnow (2026), [CAMUS: Scalable Phylogenetic Network Estimation](https://doi.org/10.1093/bioinformatics/btag245) | method | [lean4-camus](https://github.com/vltanh/lean4-camus) | formalized | Allman, Degnan, Rhodes 2011 |
 | 12 | Arasti, Mirarab (2026), [BROOQS: Spectral Methods Resolve Level-1 Hybridization Cycles](https://doi.org/10.64898/2026.08.31.748319) | method | `lean4-brooqs` | to do | - |
 | 13 | Cummings et al. (2026), [Identifiability of Phylogenetic Networks and Quintet Concordance Factors](https://arxiv.org/abs/2608.03544) | theory and algorithm | `lean4-cummings2026` | to do | - |
 | 14 | Kolbow et al. (2026), [SNaQ.jl: Improved Scalability for Level-1 Phylogenetic Network Inference](https://doi.org/10.1093/bioinformatics/btag289) | method | `lean4-snaq-jl` | to do | SNaQ |
 | 15 | Kolbow, Justison, Solís-Lemus (2026), [Beyond Level-1: Fast Inference of Generic Semi-directed Phylogenetic Networks](https://doi.org/10.64898/2026.04.17.719296) | method | `lean4-kolbow2026` | to do | - |
 | 16 | Guang et al. (2026), [DIMPLE: A Tree-Guided Divide-and-Conquer Framework for ILS-Aware Network Inference](https://doi.org/10.64898/2026.10.12.758494) | method | `lean4-dimple` | to do | - |
-| 17 | Wicke et al. (2026), [Consensus Methods for Trees of Blobs and Level-1 Phylogenetic Networks](https://doi.org/10.64898/2026.10.31.763369) | method | `lean4-wicke2026` | to do | lean4-tob |
+| 17 | Wicke et al. (2026), [Consensus Methods for Trees of Blobs and Level-1 Phylogenetic Networks](https://doi.org/10.64898/2026.10.31.763369) | method | `lean4-wicke2026` | to do | lean4-phylo-tree-of-blobs |
 
 ### 2. Semi-directed reconstruction from quartets, quarnets and quinnets
 
@@ -159,7 +159,7 @@ Priority: highest.
 | 8 | Zhu et al. (2018), [Bayesian Inference of Phylogenetic Networks from Bi-allelic Genetic Markers](https://doi.org/10.1371/journal.pcbi.1005932) | method | `lean4-zhu2018` | to do | - |
 | 9 | Hejase et al. (2018), [FastNet: Statistical Inference of Phylogenetic Networks Using Genomic Data](https://doi.org/10.1007/978-3-030-00834-5_14) | method | `lean4-fastnet` | to do | - |
 | 10 | Rabier et al. (2021), [SnappNet: Inference of Complex Phylogenetic Networks by MCMC](https://doi.org/10.1371/journal.pcbi.1008380) | method | `lean4-snappnet` | to do | - |
-| 11 | Allman, Baños, Rhodes (2022), [Identifiability of Species Network Topologies from Genomic Sequences Using the LogDet Distance](https://doi.org/10.1007/s00285-022-01734-2) | theory | `lean4-allman2022` | partly covered: lean4-ectoblob | lean4-tob |
+| 11 | Allman, Baños, Rhodes (2022), [Identifiability of Species Network Topologies from Genomic Sequences Using the LogDet Distance](https://doi.org/10.1007/s00285-022-01734-2) | theory | `lean4-allman2022` | partly covered: lean4-ectoblob | lean4-phylo-tree-of-blobs |
 | 12 | Lutteropp et al. (2022), [NetRAX: Maximum Likelihood Phylogenetic Network Inference](https://doi.org/10.1093/bioinformatics/btac396) | method | `lean4-netrax` | to do | - |
 | 13 | Kong, Swofford, Kubatko (2025), [PhyNEST: Inference of Phylogenetic Networks from Sequence Data Using Composite Likelihood](https://doi.org/10.1093/sysbio/syae054) | method | `lean4-phynest` | to do | - |
 
@@ -195,7 +195,7 @@ declaration of this library and of lean4-phylogenetics depends only on Lean's st
 - **Maintainer:** The-Anh Vu-Le.
 - **Formalization:** Claude Opus 5.5 (`claude-opus-5-5`, Anthropic), in Claude Code, with the
   [formalize-math-paper](https://github.com/vltanh/formalize-math-paper) skill. The modules of the
-  library were first written for the papers on the tree of blobs, in lean4-tob, whose history records
+  library were first written for the papers on the tree of blobs, in lean4-phylo-tree-of-blobs, whose history records
   how they were made.
 - **Review:** no person has reviewed the proofs; Lean's kernel checks them.
 

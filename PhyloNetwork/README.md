@@ -1,11 +1,11 @@
 # PhyloNetwork
 
 The library of this hub: the definitions and results that two or more papers on network estimation
-use, those of its sub-hub [lean4-tob](https://github.com/vltanh/lean4-tob) (the tree of blobs)
+use, those of its sub-hub [lean4-phylo-tree-of-blobs](https://github.com/vltanh/lean4-phylo-tree-of-blobs) (the tree of blobs)
 included, and that the root library [lean4-phylogenetics](https://github.com/vltanh/lean4-phylogenetics)
 does not hold. Each goes to the lowest node of the tree above every repository that uses it: a result
 that one paper uses stays in that paper's repository; one that only the papers on the tree of blobs
-use goes to lean4-tob's library `TreeOfBlobs`; one that papers of several hubs use, or that textbooks
+use goes to lean4-phylo-tree-of-blobs's library `TreeOfBlobs`; one that papers of several hubs use, or that textbooks
 state, goes to the root library.
 
 | Module | Content | Used by |
@@ -31,7 +31,7 @@ root's namespaces (`Phylogenetics`, `Phylogenetics.RootedNetwork`, `Phylogenetic
 `Phylogenetics.Trinomial`, `Phylogenetics.NMSC.Chain`) for what may move up to the root library with
 its name.
 
-The modules were first written in lean4-tob, for the papers on the tree of blobs. Its library
+The modules were first written in lean4-phylo-tree-of-blobs, for the papers on the tree of blobs. Its library
 `TreeOfBlobs` has deprecated modules of the same names that import them (`TreeOfBlobs.Testing.Defs`
 for `PhyloNetwork.Testing.Defs`, …), which keep the names that the declarations had there in a
 paper's namespace: deprecated aliases of the theorems (`TOBQMC.Level1.exists_blobCycle` for
