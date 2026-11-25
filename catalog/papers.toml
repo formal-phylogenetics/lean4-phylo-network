@@ -121,7 +121,7 @@ kind = "method"
 root = "Warnow2025"
 status = "in-progress"
 covered_by = [
-  { repo = "lean4-camus", what = "Observation 2, and the site model with the convergence of the quartets of SNPs (Camus/External/WarnowTabatabaeeEvans); off the train" },
+  { repo = "lean4-camus", what = "Observation 2, and the site model with the convergence of the quartets of SNPs (Camus/External/WarnowTabatabaeeEvans)" },
 ]
 
 [[paper]]
@@ -205,7 +205,7 @@ kind = "method"
 root = "Camus"
 repo = "lean4-camus"
 status = "formalized"
-commit = "f954fc024e444eba97b29766ae95900dfc551dd0"
+commit = "6cfd30785ca9ea415e91d45e59ade708b94921c5"
 
 [[paper]]
 id = "brooqs"
