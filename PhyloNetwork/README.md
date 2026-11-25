@@ -33,6 +33,8 @@ its name.
 
 The modules were first written in lean4-tob, for the papers on the tree of blobs. Its library
 `TreeOfBlobs` has deprecated modules of the same names that import them (`TreeOfBlobs.Testing.Defs`
-for `PhyloNetwork.Testing.Defs`, …), and deprecated aliases of the declarations whose names there were
-in a paper's namespace (`TOBQMC.Level1.exists_blobCycle` for `PhyloNetwork.Level1.exists_blobCycle`,
-`ECToBlob.FalseEdge.RDom` for `PhyloNetwork.RDom`, …).
+for `PhyloNetwork.Testing.Defs`, …), which keep the names that the declarations had there in a
+paper's namespace: deprecated aliases of the theorems (`TOBQMC.Level1.exists_blobCycle` for
+`PhyloNetwork.Level1.exists_blobCycle`, …) and the definitions exported into their former namespaces
+(`ECToBlob.FalseEdge.RDom` for `PhyloNetwork.RDom`, `TOBQMC.Level1.BlobCycle` for
+`PhyloNetwork.Level1.BlobCycle`, …).

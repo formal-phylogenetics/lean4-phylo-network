@@ -184,7 +184,7 @@ lake env lean scripts/Audit.lean
 ```
 
 Lean and Mathlib `v4.37.0-rc1`; [`lakefile.toml`](lakefile.toml) requires lean4-phylogenetics by
-commit, `1d73084`. The audit, [`scripts/Audit.lean`](scripts/Audit.lean), checks that every
+commit, `3fcabfd`. The audit, [`scripts/Audit.lean`](scripts/Audit.lean), checks that every
 declaration of this library and of lean4-phylogenetics depends only on Lean's standard axioms
 `propext`, `Classical.choice` and `Quot.sound`, and lists the axioms of the main theorems;
 `python3 scripts/gen_audit.py` generates its `import all` lines. CI runs the build and the audit.
