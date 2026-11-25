@@ -109,7 +109,7 @@ those that stop at the tree of blobs in
 
 ### 4. Reconstruction and reconciliation from multiple input trees
 
-- [ ] Mirzaei, Wu (2013), [Constructing Parsimonious Hybridization Networks with Multiple Phylogenetic Trees](https://pmc.ncbi.nlm.nih.gov/articles/PMC3791036/)
+- [ ] Wu (2013), [An Algorithm for Constructing Parsimonious Hybridization Networks with Multiple Phylogenetic Trees](https://pmc.ncbi.nlm.nih.gov/articles/PMC3791036/)
 - [ ] Albrecht (2015), [Computing All Hybridization Networks for Multiple Binary Phylogenetic Input Trees](https://doi.org/10.1186/s12859-015-0660-7)
 - [ ] Mirzaei, Wu (2016), [Fast Construction of Near-Parsimonious Hybridization Networks](https://doi.org/10.1109/TCBB.2015.2462336)
 - [ ] Markin, Eulenstein (2019), [Consensus Clusters in Robinson–Foulds Reticulation Networks](https://doi.org/10.4230/LIPIcs.WABI.2019.12)

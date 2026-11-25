@@ -680,15 +680,15 @@ status = "todo"
 # ---------------------------------------------------------------------------------------------
 
 [[paper]]
-id = "mirzaei2013"
+id = "wu2013"
 family = 4
 order = 1
-authors = "Mirzaei, Wu"
+authors = "Wu"
 year = "2013"
-title = "Constructing Parsimonious Hybridization Networks with Multiple Phylogenetic Trees"
+title = "An Algorithm for Constructing Parsimonious Hybridization Networks with Multiple Phylogenetic Trees"
 url = "https://pmc.ncbi.nlm.nih.gov/articles/PMC3791036/"
 kind = "method"
-root = "Mirzaei2013"
+root = "Wu2013"
 status = "todo"
 
 [[paper]]
@@ -714,7 +714,7 @@ url = "https://doi.org/10.1109/TCBB.2015.2462336"
 kind = "method"
 root = "Mirzaei2016"
 status = "todo"
-builds_on = ["mirzaei2013"]
+builds_on = ["wu2013"]
 
 [[paper]]
 id = "markin2019"
