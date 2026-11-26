@@ -39,27 +39,23 @@ catalog = "https://github.com/formal-phylogenetics/lean4-phylo-tree-of-blobs/blo
 
 [[family]]
 id = 1
-title = "Quartet- and quintet-based statistical network inference"
+title = "Quartet and quintet inference"
 priority = "highest"
 
 [[family]]
 id = 2
-title = "Semi-directed reconstruction from quartets, quarnets and quinnets"
+title = "Combinatorial reconstruction"
 
 [[family]]
 id = 3
-title = "Rooted reconstruction from triplets, trinets, clusters and LCA constraints"
-
-[[family]]
-id = 4
 title = "Reconstruction and reconciliation from multiple input trees"
 
 [[family]]
-id = 5
-title = "Model-based likelihood, Bayesian and sequence-data inference"
+id = 4
+title = "Likelihood and Bayesian inference"
 
 # ---------------------------------------------------------------------------------------------
-# 1. Quartet- and quintet-based statistical network inference
+# 1. Quartet and quintet inference
 # ---------------------------------------------------------------------------------------------
 
 [[paper]]
@@ -299,8 +295,10 @@ uses = ["lean4-phylo-tree-of-blobs"]
 note = "Its full-network results only: results that stop at the tree of blobs are out of scope"
 
 # ---------------------------------------------------------------------------------------------
-# 2. Semi-directed reconstruction from quartets, quarnets and quinnets
+# 2. Combinatorial reconstruction
 # ---------------------------------------------------------------------------------------------
+
+# Semi-directed reconstruction from quartets, quarnets and quinnets
 
 [[paper]]
 id = "keijsper2014"
@@ -438,14 +436,12 @@ kind = "theory"
 root = "Holtgrefe2026"
 status = "todo"
 
-# ---------------------------------------------------------------------------------------------
-# 3. Rooted reconstruction from triplets, trinets, clusters and LCA constraints
-# ---------------------------------------------------------------------------------------------
+# Rooted reconstruction from triplets, trinets, clusters and LCA constraints
 
 [[paper]]
 id = "jansson2006-galled"
-family = 3
-order = 1
+family = 2
+order = 12
 authors = "Jansson, Nguyen, Sung"
 year = "2006"
 title = "Algorithms for Combining Rooted Triplets into a Galled Phylogenetic Network"
@@ -456,8 +452,8 @@ status = "todo"
 
 [[paper]]
 id = "jansson2006-level1"
-family = 3
-order = 2
+family = 2
+order = 13
 authors = "Jansson, Sung"
 year = "2006"
 title = "Inferring a Level-1 Phylogenetic Network from a Dense Set of Rooted Triplets"
@@ -468,8 +464,8 @@ status = "todo"
 
 [[paper]]
 id = "vaniersel2009"
-family = 3
-order = 3
+family = 2
+order = 14
 authors = "van Iersel et al."
 year = "2009"
 title = "Constructing Level-2 Phylogenetic Networks from Triplets"
@@ -480,8 +476,8 @@ status = "todo"
 
 [[paper]]
 id = "cass"
-family = 3
-order = 4
+family = 2
+order = 15
 short = "CASS"
 authors = "van Iersel et al."
 year = "2010"
@@ -493,8 +489,8 @@ status = "todo"
 
 [[paper]]
 id = "vaniersel2011"
-family = 3
-order = 5
+family = 2
+order = 16
 authors = "van Iersel, Kelk"
 year = "2011"
 title = "Constructing the Simplest Possible Phylogenetic Network from Triplets"
@@ -505,8 +501,8 @@ status = "todo"
 
 [[paper]]
 id = "lev1athan"
-family = 3
-order = 6
+family = 2
+order = 17
 short = "LEV1ATHAN"
 authors = "Huber et al."
 year = "2011"
@@ -518,8 +514,8 @@ status = "todo"
 
 [[paper]]
 id = "kelk2012"
-family = 3
-order = 7
+family = 2
+order = 18
 authors = "Kelk, Scornavacca, van Iersel"
 year = "2012"
 title = "On the Elusiveness of Clusters"
@@ -530,8 +526,8 @@ status = "todo"
 
 [[paper]]
 id = "vaniersel2014"
-family = 3
-order = 8
+family = 2
+order = 19
 authors = "van Iersel, Moulton"
 year = "2014"
 title = "Trinets Encode Tree-Child and Level-2 Phylogenetic Networks"
@@ -542,8 +538,8 @@ status = "todo"
 
 [[paper]]
 id = "tripnet"
-family = 3
-order = 9
+family = 2
+order = 20
 short = "TripNet"
 authors = "Poormohammadi et al."
 year = "2014"
@@ -555,8 +551,8 @@ status = "todo"
 
 [[paper]]
 id = "willems2014"
-family = 3
-order = 10
+family = 2
+order = 21
 authors = "Willems, Tahiri, Makarenkov"
 year = "2014"
 title = "A New Efficient Algorithm for Inferring Explicit Hybridization Networks Following the Neighbor-Joining Principle"
@@ -567,8 +563,8 @@ status = "todo"
 
 [[paper]]
 id = "trilonet"
-family = 3
-order = 11
+family = 2
+order = 22
 short = "TriLoNet"
 authors = "Oldman et al."
 year = "2016"
@@ -580,8 +576,8 @@ status = "todo"
 
 [[paper]]
 id = "huber2017"
-family = 3
-order = 12
+family = 2
+order = 23
 authors = "Huber et al."
 year = "2017"
 title = "Reconstructing Phylogenetic Level-1 Networks from Nondense Binet and Trinet Sets"
@@ -592,8 +588,8 @@ status = "todo"
 
 [[paper]]
 id = "willems2018"
-family = 3
-order = 13
+family = 2
+order = 24
 authors = "Willems, Tahiri, Makarenkov"
 year = "2018"
 title = "Building Explicit Hybridization Networks Using the Maximum Likelihood and Neighbor-Joining Approaches"
@@ -604,8 +600,8 @@ status = "todo"
 
 [[paper]]
 id = "semple2021"
-family = 3
-order = 14
+family = 2
+order = 25
 authors = "Semple, Toft"
 year = "2021"
 title = "Trinets Encode Orchard Phylogenetic Networks"
@@ -616,8 +612,8 @@ status = "todo"
 
 [[paper]]
 id = "vaniersel2022-trinets"
-family = 3
-order = 15
+family = 2
+order = 26
 authors = "van Iersel et al."
 year = "2022"
 title = "An Algorithm for Reconstructing Level-2 Phylogenetic Networks from Trinets"
@@ -629,8 +625,8 @@ builds_on = ["vaniersel2014"]
 
 [[paper]]
 id = "lindeberg2026"
-family = 3
-order = 16
+family = 2
+order = 27
 authors = "Lindeberg et al."
 year = "2026"
 title = "Inferring DAGs and Phylogenetic Networks from Least Common Ancestors"
@@ -641,8 +637,8 @@ status = "todo"
 
 [[paper]]
 id = "ebert2026-constraints"
-family = 3
-order = 17
+family = 2
+order = 28
 authors = "Ebert, Hellmuth"
 year = "2026"
 title = "Inferring Phylogenetic Networks from Required and Forbidden LCA-Constraints"
@@ -653,8 +649,8 @@ status = "todo"
 
 [[paper]]
 id = "hellmuth2026"
-family = 3
-order = 18
+family = 2
+order = 29
 authors = "Hellmuth, Lindeberg, Moulton"
 year = "2026"
 title = "Encoding Phylogenetic Networks with Least Common Ancestor Constraints"
@@ -665,8 +661,8 @@ status = "todo"
 
 [[paper]]
 id = "ebert2026-triples"
-family = 3
-order = 19
+family = 2
+order = 30
 authors = "Ebert, Lindeberg, Hellmuth"
 year = "2026"
 title = "Novel Triple-Based Problems for the Construction of Phylogenetic Networks via Least Common Ancestors"
@@ -676,12 +672,12 @@ root = "Ebert2026Triples"
 status = "todo"
 
 # ---------------------------------------------------------------------------------------------
-# 4. Reconstruction and reconciliation from multiple input trees
+# 3. Reconstruction and reconciliation from multiple input trees
 # ---------------------------------------------------------------------------------------------
 
 [[paper]]
 id = "wu2013"
-family = 4
+family = 3
 order = 1
 authors = "Wu"
 year = "2013"
@@ -693,7 +689,7 @@ status = "todo"
 
 [[paper]]
 id = "albrecht2015"
-family = 4
+family = 3
 order = 2
 authors = "Albrecht"
 year = "2015"
@@ -705,7 +701,7 @@ status = "todo"
 
 [[paper]]
 id = "mirzaei2016"
-family = 4
+family = 3
 order = 3
 authors = "Mirzaei, Wu"
 year = "2016"
@@ -718,7 +714,7 @@ builds_on = ["wu2013"]
 
 [[paper]]
 id = "markin2019"
-family = 4
+family = 3
 order = 4
 authors = "Markin, Eulenstein"
 year = "2019"
@@ -730,7 +726,7 @@ status = "todo"
 
 [[paper]]
 id = "vaniersel2019"
-family = 4
+family = 3
 order = 5
 authors = "Murakami et al."
 year = "2019"
@@ -742,7 +738,7 @@ status = "todo"
 
 [[paper]]
 id = "vaniersel2022-fpt"
-family = 4
+family = 3
 order = 6
 authors = "van Iersel et al."
 year = "2022"
@@ -754,7 +750,7 @@ status = "todo"
 
 [[paper]]
 id = "rfnet2"
-family = 4
+family = 3
 order = 7
 short = "RF-Net 2"
 authors = "Markin et al."
@@ -767,7 +763,7 @@ status = "todo"
 
 [[paper]]
 id = "treeknit"
-family = 4
+family = 3
 order = 8
 short = "TreeKnit"
 authors = "Barrat-Charlaix, Vaughan, Neher"
@@ -780,7 +776,7 @@ status = "todo"
 
 [[paper]]
 id = "alts"
-family = 4
+family = 3
 order = 9
 short = "ALTS"
 authors = "Zhang et al."
@@ -793,7 +789,7 @@ status = "todo"
 
 [[paper]]
 id = "bernardini2023"
-family = 4
+family = 3
 order = 10
 authors = "Bernardini et al."
 year = "2023"
@@ -805,7 +801,7 @@ status = "todo"
 
 [[paper]]
 id = "fhynch"
-family = 4
+family = 3
 order = 11
 short = "FHyNCH"
 authors = "Bernardini et al."
@@ -819,7 +815,7 @@ builds_on = ["bernardini2023"]
 
 [[paper]]
 id = "phylofusion"
-family = 4
+family = 3
 order = 12
 short = "PhyloFusion"
 authors = "Zhang, Cetinkaya, Huson"
@@ -831,12 +827,12 @@ root = "PhyloFusion"
 status = "todo"
 
 # ---------------------------------------------------------------------------------------------
-# 5. Model-based likelihood, Bayesian and sequence-data inference
+# 4. Likelihood and Bayesian inference
 # ---------------------------------------------------------------------------------------------
 
 [[paper]]
 id = "yu2013"
-family = 5
+family = 4
 order = 1
 authors = "Yu, Barnett, Nakhleh"
 year = "2013"
@@ -848,7 +844,7 @@ status = "todo"
 
 [[paper]]
 id = "yu2014"
-family = 5
+family = 4
 order = 2
 authors = "Yu et al."
 year = "2014"
@@ -860,7 +856,7 @@ status = "todo"
 
 [[paper]]
 id = "phylonet-mpl"
-family = 5
+family = 4
 order = 3
 short = "PhyloNet-MPL"
 authors = "Yu, Nakhleh"
@@ -873,7 +869,7 @@ status = "todo"
 
 [[paper]]
 id = "yu2015"
-family = 5
+family = 4
 order = 4
 authors = "Yu, Nakhleh"
 year = "2015"
@@ -885,7 +881,7 @@ status = "todo"
 
 [[paper]]
 id = "wen2016"
-family = 5
+family = 4
 order = 5
 authors = "Wen, Yu, Nakhleh"
 year = "2016"
@@ -897,7 +893,7 @@ status = "todo"
 
 [[paper]]
 id = "wen2018"
-family = 5
+family = 4
 order = 6
 authors = "Wen, Nakhleh"
 year = "2018"
@@ -910,7 +906,7 @@ builds_on = ["wen2016"]
 
 [[paper]]
 id = "zhang2018"
-family = 5
+family = 4
 order = 7
 authors = "Zhang et al."
 year = "2018"
@@ -922,7 +918,7 @@ status = "todo"
 
 [[paper]]
 id = "zhu2018"
-family = 5
+family = 4
 order = 8
 authors = "Zhu et al."
 year = "2018"
@@ -934,7 +930,7 @@ status = "todo"
 
 [[paper]]
 id = "fastnet"
-family = 5
+family = 4
 order = 9
 short = "FastNet"
 authors = "Hejase et al."
@@ -947,7 +943,7 @@ status = "todo"
 
 [[paper]]
 id = "snappnet"
-family = 5
+family = 4
 order = 10
 short = "SnappNet"
 authors = "Rabier et al."
@@ -960,7 +956,7 @@ status = "todo"
 
 [[paper]]
 id = "allman2022"
-family = 5
+family = 4
 order = 11
 authors = "Allman, Baños, Rhodes"
 year = "2022"
@@ -976,7 +972,7 @@ covered_by = [
 
 [[paper]]
 id = "netrax"
-family = 5
+family = 4
 order = 12
 short = "NetRAX"
 authors = "Lutteropp et al."
@@ -989,7 +985,7 @@ status = "todo"
 
 [[paper]]
 id = "phynest"
-family = 5
+family = 4
 order = 13
 short = "PhyNEST"
 authors = "Kong, Swofford, Kubatko"
