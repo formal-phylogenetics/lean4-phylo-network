@@ -20,22 +20,12 @@
 #   repo        only when the repository is not named lean4-<id>, as for papers on one topic that
 #               share a repository (CONVENTIONS, Section 3)
 #   commit      for a formalized paper: the commit that other repositories require
-#   uses        other hubs whose library its formalization requires (lean4-phylo-tree-of-blobs: the
-#               tree of blobs), besides this one
+#   uses        other hubs, or libraries under a hub (lean4-phylo-tree-of-blobs: the tree of blobs),
+#               whose library its formalization requires, besides this one
 #   builds_on   ids of papers, of any hub's catalog, whose results its proofs use. Only what is known
 #               before the paper's inventory; its Phase 1 completes the list here
 #   covered_by  what is already formalized, and where
 #   note        anything else
-
-# The sub-hubs of this hub: hubs for a part of its field, each with its library and its catalog. Their
-# papers are papers on network estimation too, and require this hub's library as well as their own
-# (lean4-phylogenetics' docs/CONVENTIONS.md, Section 1); the registry, lean4-phylogenetics'
-# collection/repos.toml, gives each its `parent`.
-[[subhub]]
-repo = "lean4-phylo-tree-of-blobs"
-title = "The tree of blobs"
-scope = "Inferring the tree of blobs of a network from quartet concordance factors: identifiability and consistent inference"
-catalog = "https://github.com/formal-phylogenetics/lean4-phylo-tree-of-blobs/blob/main/catalog/papers.toml"
 
 [[family]]
 id = 1
@@ -53,6 +43,10 @@ title = "Reconstruction and reconciliation from multiple input trees"
 [[family]]
 id = 4
 title = "Likelihood and Bayesian inference"
+
+[[family]]
+id = 5
+title = "Tree of blobs"
 
 # ---------------------------------------------------------------------------------------------
 # 1. Quartet and quintet inference
@@ -995,3 +989,69 @@ url = "https://doi.org/10.1093/sysbio/syae054"
 kind = "method"
 root = "PhyNest"
 status = "todo"
+
+# ---------------------------------------------------------------------------------------------
+# 5. Tree of blobs
+# ---------------------------------------------------------------------------------------------
+
+[[paper]]
+id = "allman2023"
+family = 5
+order = 1
+authors = "Allman, Baños, Mitchell, Rhodes"
+year = "2023"
+title = "The Tree of Blobs of a Species Network: Identifiability Under the Coalescent"
+url = "https://doi.org/10.1007/s00285-022-01838-9"
+kind = "theory"
+root = "Allman2023"
+status = "formalized"
+commit = "46efa61d0988df12649089689ae77bc100be034f"
+uses = ["lean4-phylo-tree-of-blobs"]
+
+[[paper]]
+id = "tinnik"
+family = 5
+order = 2
+short = "TINNiK"
+authors = "Allman, Baños, Mitchell, Rhodes"
+year = "2024"
+title = "TINNiK: Inference of the Tree of Blobs of a Species Network Under the Coalescent Model"
+url = "https://doi.org/10.1186/s13015-024-00266-2"
+kind = "method"
+root = "Tinnik"
+status = "formalized"
+commit = "de514e1f14522531f16dcdfa12244fe72fe05944"
+uses = ["lean4-phylo-tree-of-blobs"]
+builds_on = ["allman2023"]
+
+[[paper]]
+id = "tob-qmc"
+family = 5
+order = 3
+short = "TOB-QMC"
+authors = "Dai, Han, Molloy"
+year = "2026"
+title = "Quartet-based species tree methods enable fast and consistent tree of blobs reconstruction under the network multispecies coalescent"
+url = "https://doi.org/10.1101/2025.11.05.686850"
+kind = "method"
+root = "TobQmc"
+status = "formalized"
+commit = "9af187c56bbf8829a22e94ea90164fba3f74a80b"
+uses = ["lean4-phylo-tree-of-blobs"]
+builds_on = ["allman2023", "tinnik"]
+
+[[paper]]
+id = "ectoblob"
+family = 5
+order = 4
+short = "ECToBlob"
+authors = "Rhodes, Allman, Ané, Baños"
+year = "2026"
+title = "Statistical Inference of the Tree of Blobs of a Phylogenetic Network from Quartet Concordance Factors"
+url = "https://doi.org/10.64898/2026.05.28.728501"
+kind = "method"
+root = "Ectoblob"
+status = "formalized"
+commit = "98367a36cdd90f34b6ca3447824c1584d64d8aee"
+uses = ["lean4-phylo-tree-of-blobs"]
+builds_on = ["allman2023", "tinnik", "nanuq"]
