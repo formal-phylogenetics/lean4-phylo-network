@@ -54,21 +54,21 @@ those that stop at the tree of blobs in
 ### 1. Quartet- and quintet-based statistical network inference
 
 - [x] Baños (2019), [Identifying Species Network Features from Gene Tree Quartets Under the Coalescent Model](https://doi.org/10.1007/s11538-018-0485-4): [lean4-banos2019](https://github.com/formal-phylogenetics/lean4-banos2019)
-- [ ] Allman, Baños, Rhodes (2019), [NANUQ: A Method for Inferring Species Networks from Gene Trees](https://doi.org/10.1186/s13015-019-0159-2), in progress: [lean4-nanuq](https://github.com/formal-phylogenetics/lean4-nanuq)
-- [ ] Solís-Lemus, Ané (2016), [SNaQ: Inferring Phylogenetic Networks with Maximum Pseudolikelihood](https://doi.org/10.1371/journal.pgen.1005896), in progress
+- [ ] Allman, Baños, Rhodes (2019), [NANUQ: A Method for Inferring Species Networks from Gene Trees Under the Coalescent Model](https://doi.org/10.1186/s13015-019-0159-2), in progress: [lean4-nanuq](https://github.com/formal-phylogenetics/lean4-nanuq)
+- [ ] Solís-Lemus, Ané (2016), [Inferring Phylogenetic Networks with Maximum Pseudolikelihood Under Incomplete Lineage Sorting](https://doi.org/10.1371/journal.pgen.1005896), in progress
 - [ ] Allman et al. (2024), [Identifiability of Level-1 Species Networks from Gene Tree Quartets](https://doi.org/10.1007/s11538-024-01339-4)
 - [ ] Warnow, Tabatabaee, Evans (2025), [Advances in Estimating Level-1 Phylogenetic Networks from Unrooted SNPs](https://doi.org/10.1089/cmb.2024.0710), partly covered by lean4-camus
 - [ ] Allman et al. (2025), [NANUQ+: A Divide-and-Conquer Approach to Network Estimation](https://doi.org/10.1186/s13015-025-00274-w)
 - [ ] Allman et al. (2025), [Beyond Level-1: Identifiability of a Class of Galled Tree-Child Networks](https://doi.org/10.1007/s11538-025-01545-8)
-- [ ] Kolbow, Kong, Solís-Lemus (2025–2026), [InPhyNet: Massively Scalable Inference of Phylogenetic Networks](https://doi.org/10.1101/2025.05.05.652278)
-- [ ] Frohn et al. (2026), [Bounds on Sequence Length for Reconstructing Level-1 Networks Under the CFN Model](https://doi.org/10.1007/s00026-026-00830-0)
-- [ ] Dai, Molloy (2026), [NetCS: Is Level-1 Blob Reconstruction Under the Network Multispecies Coalescent Easy?](https://doi.org/10.4230/LIPIcs.WABI.2026.1)
+- [ ] Kolbow, Kong, Solís-Lemus (2025), [A Method for Massively Scalable Inference of Phylogenetic Networks](https://doi.org/10.1101/2025.05.05.652278)
+- [ ] Frohn et al. (2026), [Bounds on the Sequence Length Sufficient to Reconstruct Binary Level-1 Phylogenetic Networks Under the CFN Model](https://doi.org/10.1007/s00026-026-00830-0)
+- [ ] Dai, Molloy (2026), [Is Level-1 Blob Reconstruction Under the Network Multispecies Coalescent Easy?](https://doi.org/10.4230/LIPIcs.WABI.2026.1)
 - [x] Willson, Warnow (2026), [CAMUS: Scalable Phylogenetic Network Estimation](https://doi.org/10.1093/bioinformatics/btag245): [lean4-camus](https://github.com/formal-phylogenetics/lean4-camus)
-- [ ] Arasti, Mirarab (2026), [BROOQS: Spectral Methods Resolve Level-1 Hybridization Cycles](https://doi.org/10.64898/2026.08.31.748319)
+- [ ] Arasti, Mirarab (2026), [BROOQS: Quartet-Based Resolution of Level-1 Hybridization Cycles Without Tests of Symmetry](https://doi.org/10.64898/2026.08.31.748319)
 - [ ] Cummings et al. (2026), [Identifiability of Phylogenetic Networks and Quintet Concordance Factors](https://arxiv.org/abs/2608.03544)
 - [ ] Kolbow et al. (2026), [SNaQ.jl: Improved Scalability for Level-1 Phylogenetic Network Inference](https://doi.org/10.1093/bioinformatics/btag289)
 - [ ] Kolbow, Justison, Solís-Lemus (2026), [Beyond Level-1: Fast Inference of Generic Semi-directed Phylogenetic Networks](https://doi.org/10.64898/2026.04.17.719296)
-- [ ] Guang et al. (2026), [DIMPLE: A Tree-Guided Divide-and-Conquer Framework for ILS-Aware Network Inference](https://doi.org/10.64898/2026.10.12.758494)
+- [ ] Guang et al. (2026), [DIMPLE: A Tree-Guided Divide-and-Conquer Framework for ILS-Aware Phylogenetic Network Inference on Large-Scale Data](https://doi.org/10.64898/2026.10.12.758494)
 - [ ] Wicke et al. (2026), [Consensus Methods for Trees of Blobs and Level-1 Phylogenetic Networks](https://doi.org/10.64898/2026.10.31.763369)
 
 ### 2. Semi-directed reconstruction from quartets, quarnets and quinnets
@@ -78,32 +78,32 @@ those that stop at the tree of blobs in
 - [ ] Huber, Moulton, Semple, Wu (2018), [Quarnet Inference Rules for Level-1 Networks](https://doi.org/10.1007/s11538-018-0450-2)
 - [ ] Huebler et al. (2019), [Constructing Semi-Directed Level-1 Phylogenetic Networks from Quarnets](https://arxiv.org/abs/1910.00048)
 - [ ] Frohn et al. (2025), [Reconstructing Semi-Directed Level-1 Networks Using Few Quarnets](https://doi.org/10.1016/j.jcss.2025.103655)
-- [ ] Holtgrefe et al. (2025), [Squirrel: Reconstructing Semi-directed Level-1 Networks from Four-Leaved Networks or Alignments](https://doi.org/10.1093/molbev/msaf067)
+- [ ] Holtgrefe et al. (2025), [Squirrel: Reconstructing Semi-directed Phylogenetic Level-1 Networks from Four-Leaved Networks or Sequence Alignments](https://doi.org/10.1093/molbev/msaf067)
 - [ ] Huber et al. (2025), [When Are Quarnets Sufficient to Reconstruct Semi-directed Phylogenetic Networks?](https://doi.org/10.1007/s11538-025-01510-5), partly covered by lean4-phylo-network
-- [ ] Holtgrefe et al. (2025), [Distinguishing Level-2 Networks with Quartets and Inter-Taxon Quartet Distances](https://doi.org/10.1007/s11538-025-01549-4)
-- [ ] Holtgrefe et al. (2025–2026), [Characterizing Semi-directed Phylogenetic Networks and Their Multi-rootable Variants](https://arxiv.org/abs/2507.18772)
+- [ ] Holtgrefe et al. (2025), [Distinguishing Phylogenetic Level-2 Networks with Quartets and Inter-Taxon Quartet Distances](https://doi.org/10.1007/s11538-025-01549-4)
+- [ ] Holtgrefe et al. (2026), [Characterizing Semi-directed Phylogenetic Networks and Their Multi-rootable Variants](https://doi.org/10.1007/s12064-025-00453-8)
 - [ ] Ribas, Pons, Ané (2026), [A μ-Distance for Semidirected Orchard Phylogenetic Networks](https://arxiv.org/abs/2605.06243)
 - [ ] Holtgrefe et al. (2026), [Encoding Level-3 Semi-directed Phylogenetic Networks by Quarnets and Quinnets](https://arxiv.org/abs/2610.07855)
 
 ### 3. Rooted reconstruction from triplets, trinets, clusters and LCA constraints
 
 - [ ] Jansson, Nguyen, Sung (2006), [Algorithms for Combining Rooted Triplets into a Galled Phylogenetic Network](https://doi.org/10.1137/S0097539704446529)
-- [ ] Jansson, Sung (2006), [Inferring a Level-1 Phylogenetic Network from Dense Rooted Triplets](https://doi.org/10.1016/j.tcs.2006.06.022)
+- [ ] Jansson, Sung (2006), [Inferring a Level-1 Phylogenetic Network from a Dense Set of Rooted Triplets](https://doi.org/10.1016/j.tcs.2006.06.022)
 - [ ] van Iersel et al. (2009), [Constructing Level-2 Phylogenetic Networks from Triplets](https://doi.org/10.1109/TCBB.2009.22)
-- [ ] van Iersel et al. (2010), [CASS: Using Fewer Reticulations to Represent Conflicting Clusters](https://doi.org/10.1093/bioinformatics/btq202)
+- [ ] van Iersel et al. (2010), [Phylogenetic Networks Do Not Need to Be Complex: Using Fewer Reticulations to Represent Conflicting Clusters](https://doi.org/10.1093/bioinformatics/btq202)
 - [ ] van Iersel, Kelk (2011), [Constructing the Simplest Possible Phylogenetic Network from Triplets](https://doi.org/10.1007/s00453-009-9333-0)
-- [ ] Huber et al. (2011), [LEV1ATHAN: A Practical Algorithm for Reconstructing Level-1 Phylogenetic Networks](https://doi.org/10.1109/TCBB.2010.17)
+- [ ] Huber et al. (2011), [A Practical Algorithm for Reconstructing Level-1 Phylogenetic Networks](https://doi.org/10.1109/TCBB.2010.17)
 - [ ] Kelk, Scornavacca, van Iersel (2012), [On the Elusiveness of Clusters](https://doi.org/10.1109/TCBB.2011.128)
 - [ ] van Iersel, Moulton (2014), [Trinets Encode Tree-Child and Level-2 Phylogenetic Networks](https://doi.org/10.1007/s00285-013-0683-5)
-- [ ] Poormohammadi et al. (2014), [TripNet: Constructing Rooted Networks from Rooted Triplets](https://doi.org/10.1371/journal.pone.0106531)
-- [ ] Willems, Tahiri, Makarenkov (2014), [Inferring Explicit Hybridization Networks Following the Neighbor-Joining Principle](https://doi.org/10.1142/S0219720014500243)
-- [ ] Oldman et al. (2016), [TriLoNet: Piecing Together Small Networks to Reconstruct Reticulate Histories](https://doi.org/10.1093/molbev/msw068)
-- [ ] Huber et al. (2017), [Reconstructing Level-1 Networks from Nondense Binet and Trinet Sets](https://doi.org/10.1007/s00453-015-0069-8)
-- [ ] Willems, Tahiri, Makarenkov (2018), [Building Explicit Hybridization Networks Using Maximum Likelihood and Neighbor Joining](https://doi.org/10.5445/KSP/1000085951/04)
+- [ ] Poormohammadi et al. (2014), [TripNet: A Method for Constructing Rooted Phylogenetic Networks from Rooted Triplets](https://doi.org/10.1371/journal.pone.0106531)
+- [ ] Willems, Tahiri, Makarenkov (2014), [A New Efficient Algorithm for Inferring Explicit Hybridization Networks Following the Neighbor-Joining Principle](https://doi.org/10.1142/S0219720014500243)
+- [ ] Oldman et al. (2016), [TriLoNet: Piecing Together Small Networks to Reconstruct Reticulate Evolutionary Histories](https://doi.org/10.1093/molbev/msw068)
+- [ ] Huber et al. (2017), [Reconstructing Phylogenetic Level-1 Networks from Nondense Binet and Trinet Sets](https://doi.org/10.1007/s00453-015-0069-8)
+- [ ] Willems, Tahiri, Makarenkov (2018), [Building Explicit Hybridization Networks Using the Maximum Likelihood and Neighbor-Joining Approaches](https://doi.org/10.5445/KSP/1000085951/04)
 - [ ] Semple, Toft (2021), [Trinets Encode Orchard Phylogenetic Networks](https://doi.org/10.1007/s00285-021-01654-7)
 - [ ] van Iersel et al. (2022), [An Algorithm for Reconstructing Level-2 Phylogenetic Networks from Trinets](https://doi.org/10.1016/j.ipl.2022.106300)
 - [ ] Lindeberg et al. (2026), [Inferring DAGs and Phylogenetic Networks from Least Common Ancestors](https://doi.org/10.1016/j.tcs.2026.116114)
-- [ ] Ebert, Hellmuth (2026), [Inferring Phylogenetic Networks from Allowed and Forbidden LCA-Constraints](https://arxiv.org/abs/2605.03827)
+- [ ] Ebert, Hellmuth (2026), [Inferring Phylogenetic Networks from Required and Forbidden LCA-Constraints](https://arxiv.org/abs/2605.03827)
 - [ ] Hellmuth, Lindeberg, Moulton (2026), [Encoding Phylogenetic Networks with Least Common Ancestor Constraints](https://arxiv.org/abs/2606.16963)
 - [ ] Ebert, Lindeberg, Hellmuth (2026), [Novel Triple-Based Problems for the Construction of Phylogenetic Networks via Least Common Ancestors](https://arxiv.org/abs/2606.24415)
 
@@ -111,32 +111,32 @@ those that stop at the tree of blobs in
 
 - [ ] Wu (2013), [An Algorithm for Constructing Parsimonious Hybridization Networks with Multiple Phylogenetic Trees](https://pmc.ncbi.nlm.nih.gov/articles/PMC3791036/)
 - [ ] Albrecht (2015), [Computing All Hybridization Networks for Multiple Binary Phylogenetic Input Trees](https://doi.org/10.1186/s12859-015-0660-7)
-- [ ] Mirzaei, Wu (2016), [Fast Construction of Near-Parsimonious Hybridization Networks](https://doi.org/10.1109/TCBB.2015.2462336)
+- [ ] Mirzaei, Wu (2016), [Fast Construction of Near Parsimonious Hybridization Networks for Multiple Phylogenetic Trees](https://doi.org/10.1109/TCBB.2015.2462336)
 - [ ] Markin, Eulenstein (2019), [Consensus Clusters in Robinson–Foulds Reticulation Networks](https://doi.org/10.4230/LIPIcs.WABI.2019.12)
-- [ ] van Iersel et al. (2019), [Reconstructing Tree-Child Networks from Reticulate-Edge-Deleted Subnetworks](https://doi.org/10.1007/s11538-019-00641-w)
+- [ ] Murakami et al. (2019), [Reconstructing Tree-Child Networks from Reticulate-Edge-Deleted Subnetworks](https://doi.org/10.1007/s11538-019-00641-w)
 - [ ] van Iersel et al. (2022), [A Practical Fixed-Parameter Algorithm for Constructing Tree-Child Networks from Multiple Binary Trees](https://doi.org/10.1007/s00453-021-00914-8)
 - [ ] Markin et al. (2022), [RF-Net 2: Fast Inference of Virus Reassortment and Hybridization Networks](https://doi.org/10.1093/bioinformatics/btac075)
 - [ ] Barrat-Charlaix, Vaughan, Neher (2022), [TreeKnit: Inferring Ancestral Reassortment Graphs of Influenza Viruses](https://doi.org/10.1371/journal.pcbi.1010394)
-- [ ] Zhang et al. (2023), [ALTS: Inferring Networks by Aligning Lineage Taxon Strings](https://doi.org/10.1101/gr.277669.123)
+- [ ] Zhang et al. (2023), [A Fast and Scalable Method for Inferring Phylogenetic Networks from Trees by Aligning Lineage Taxon Strings](https://doi.org/10.1101/gr.277669.123)
 - [ ] Bernardini et al. (2023), [Constructing Phylogenetic Networks via Cherry Picking and Machine Learning](https://doi.org/10.1186/s13015-023-00233-3)
-- [ ] Bernardini et al. (2024), [FHyNCH: Inferring Networks from Multifurcating Trees via Cherry Picking and Machine Learning](https://doi.org/10.1016/j.ympev.2024.108137)
-- [ ] Zhang, Cetinkaya, Huson (2025), [PhyloFusion: Fast Fusion of Rooted Phylogenetic Trees into Rooted Networks](https://doi.org/10.1093/sysbio/syaf049)
+- [ ] Bernardini et al. (2024), [Inferring Phylogenetic Networks from Multifurcating Trees via Cherry Picking and Machine Learning](https://doi.org/10.1016/j.ympev.2024.108137)
+- [ ] Zhang, Cetinkaya, Huson (2026), [PhyloFusion—Fast and Easy Fusion of Rooted Phylogenetic Trees into Rooted Phylogenetic Networks](https://doi.org/10.1093/sysbio/syaf049)
 
 ### 5. Model-based likelihood, Bayesian and sequence-data inference
 
-- [ ] Yu, Zhu, Degnan, Nakhleh (2013), [Parsimonious Inference of Hybridization in the Presence of Incomplete Lineage Sorting](https://doi.org/10.1093/sysbio/syt037)
+- [ ] Yu, Barnett, Nakhleh (2013), [Parsimonious Inference of Hybridization in the Presence of Incomplete Lineage Sorting](https://doi.org/10.1093/sysbio/syt037)
 - [ ] Yu et al. (2014), [Maximum Likelihood Inference of Reticulate Evolutionary Histories](https://doi.org/10.1073/pnas.1407950111)
-- [ ] Yu, Nakhleh (2015), [PhyloNet-MPL: Maximum Pseudo-Likelihood Inference of Phylogenetic Networks](https://doi.org/10.1186/1471-2164-16-S10-S10)
-- [ ] Yu, Nakhleh (2015), [A Distance-Based Method for Inferring Phylogenetic Networks in the Presence of ILS](https://doi.org/10.1007/978-3-319-19048-8_32)
+- [ ] Yu, Nakhleh (2015), [A Maximum Pseudo-Likelihood Approach for Phylogenetic Networks](https://doi.org/10.1186/1471-2164-16-S10-S10)
+- [ ] Yu, Nakhleh (2015), [A Distance-Based Method for Inferring Phylogenetic Networks in the Presence of Incomplete Lineage Sorting](https://doi.org/10.1007/978-3-319-19048-8_32)
 - [ ] Wen, Yu, Nakhleh (2016), [Bayesian Inference of Reticulate Phylogenies Under the Multispecies Network Coalescent](https://doi.org/10.1371/journal.pgen.1006006)
 - [ ] Wen, Nakhleh (2018), [Coestimating Reticulate Phylogenies and Gene Trees from Multilocus Sequence Data](https://doi.org/10.1093/sysbio/syx085)
 - [ ] Zhang et al. (2018), [Bayesian Inference of Species Networks from Multilocus Sequence Data](https://doi.org/10.1093/molbev/msx307)
 - [ ] Zhu et al. (2018), [Bayesian Inference of Phylogenetic Networks from Bi-allelic Genetic Markers](https://doi.org/10.1371/journal.pcbi.1005932)
-- [ ] Hejase et al. (2018), [FastNet: Statistical Inference of Phylogenetic Networks Using Genomic Data](https://doi.org/10.1007/978-3-030-00834-5_14)
-- [ ] Rabier et al. (2021), [SnappNet: Inference of Complex Phylogenetic Networks by MCMC](https://doi.org/10.1371/journal.pcbi.1008380)
+- [ ] Hejase et al. (2018), [FastNet: Fast and Accurate Statistical Inference of Phylogenetic Networks Using Large-Scale Genomic Sequence Data](https://doi.org/10.1007/978-3-030-00834-5_14)
+- [ ] Rabier et al. (2021), [On the Inference of Complex Phylogenetic Networks by Markov Chain Monte-Carlo](https://doi.org/10.1371/journal.pcbi.1008380)
 - [ ] Allman, Baños, Rhodes (2022), [Identifiability of Species Network Topologies from Genomic Sequences Using the LogDet Distance](https://doi.org/10.1007/s00285-022-01734-2), partly covered by lean4-ectoblob
-- [ ] Lutteropp et al. (2022), [NetRAX: Maximum Likelihood Phylogenetic Network Inference](https://doi.org/10.1093/bioinformatics/btac396)
-- [ ] Kong, Swofford, Kubatko (2025), [PhyNEST: Inference of Phylogenetic Networks from Sequence Data Using Composite Likelihood](https://doi.org/10.1093/sysbio/syae054)
+- [ ] Lutteropp et al. (2022), [NetRAX: Accurate and Fast Maximum Likelihood Phylogenetic Network Inference](https://doi.org/10.1093/bioinformatics/btac396)
+- [ ] Kong, Swofford, Kubatko (2025), [Inference of Phylogenetic Networks from Sequence Data Using Composite Likelihood](https://doi.org/10.1093/sysbio/syae054)
 
 <!-- END catalog:papers -->
 
